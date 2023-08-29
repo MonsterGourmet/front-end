@@ -11,7 +11,7 @@ export interface ILogo {
 
 export interface Type {
      Number: number;
-     Status: 'Open' | 'Close'
+     Status: 'Open' | 'Close' 
 }
 
 export type ILogoOnly = Pick<ILogo, 'Status'>

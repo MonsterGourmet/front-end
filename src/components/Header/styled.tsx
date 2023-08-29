@@ -1,7 +1,6 @@
 'use client'
+
 import styled from 'styled-components';
-
-
 
 export const SHeader = styled.header`
   height: 140px;
@@ -16,6 +15,5 @@ export const SHeader = styled.header`
   display: flex;
 
   transition: 200ms linear;
-
 `;
 

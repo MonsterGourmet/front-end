@@ -8,39 +8,48 @@ const SFigure = styled.figure<ILogoOnly>`
      height: 119px;
      width: 116px;
     
-     border-radius: 100px;
-     
+     border-radius: 100%;
+     border: 2.5px solid transparent;
+    
+
      overflow: hidden;
 
      animation: ${(props) => props.Status} 2s ease-in-out infinite;
+
 
      img{ height: 100%; width: 100%}
 
      @keyframes On {
             0% {
                box-shadow: 1px 0px 30px 0 var(--color-white);
+               border: 2.5px solid transparent;
             }
   
             50% {
                box-shadow: 0px 0px 32px 12px var(--color-Brand1);
+               border: 2.5px solid var(--color-Brand1);
             }
 
             100% {
                box-shadow: 1px 0px 30px 0 var(--color-white);
+               border: 2.5px solid transparent;
             }
      }
 
      @keyframes Off {
             0% {
                box-shadow: 1px 0px 32px 0 var(--color-white);
+               border: 2.5px solid transparent;
             }
   
             50% {
                box-shadow: 1px 0px 32px 2.5px var(--color-Alert1);
+               border: 2.5px solid var(--color-Alert1);
             }
 
             100% {
                box-shadow:1px 0px 32px 0 var(--color-white);
+               border: 2.5px solid transparent;
             }
      }
 `
