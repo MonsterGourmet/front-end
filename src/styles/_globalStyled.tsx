@@ -9,12 +9,15 @@ const GlobalStyle = createGlobalStyle`
 
     box-sizing: border-box;
   }
+
+  button {
+	cursor: pointer;
+  }
+
   :root {
 		--color-Alert1: #cd2b31;
-		--color-Alert2: #fdd8d8;
-		--color-Alert3: #ffe5e5;
 
-		--color-Sucess1: #18794e;
+		--color-Sucess1: #17e636;
 		--color-Sucess2: #ccebd7;
 		--color-Sucess3: #ddf3e4;
 
@@ -31,22 +34,22 @@ const GlobalStyle = createGlobalStyle`
 		--color-Random11: #5700e3;
 		--color-Random12: #30007d;
 
-		--color-Brand1: #F77A20BF;
+		--color-Brand1: #F77A20;
 		--color-Brand2: #5126ea;
 		--color-Brand3: #b0a6f0;
 		--color-Brand4: #edeafd;
 
 		--color-Grey0: #0b0d0d;
 		--color-Grey1: #212529;
-		--color-Grey2: 	   #495057;
-		--color-Grey3: 	   #868e96;
-		--color-Grey4: 	   #adb5bd;
-		--color-Grey5: 	   #ced4da;
-		--color-Grey6: 	   #dee2e6;
-		--color-Grey7: 	   #e9ecef;
-		--color-Grey8: 	   #f1f3f5;
-		--color-Grey9: 	   #f8f9fa;
-		--color-Grey10: 	   #fdfdfd;
+		--color-Grey2: #495057;
+		--color-Grey3: #868e96;
+		--color-Grey4: #adb5bd;
+		--color-Grey5: #ced4da;
+		--color-Grey6: #dee2e6;
+		--color-Grey7: #e9ecef;
+		--color-Grey8: #f1f3f5;
+		--color-Grey9: #f8f9fa;
+		--color-Grey10:#fdfdfd;
 		--color-White:#ffffff;
 
 		--slider-Widht: 250px;
