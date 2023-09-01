@@ -2,11 +2,11 @@
 import { styled } from "styled-components";
 
 import swapThemes from "./utils";
-import { ILogoOnly, iButton } from "./types";
+import { Il, iButton } from "./types";
 
-const SFigure = styled.figure<ILogoOnly>`
-     height: 119px;
-     width: 116px;
+const SFigure = styled.figure<Il>`
+     height: 105px;
+     width: 105px;
     
      border-radius: 100%;
      border: 2.5px solid transparent;
@@ -14,24 +14,24 @@ const SFigure = styled.figure<ILogoOnly>`
 
      overflow: hidden;
 
-     animation: ${(props) => props.Status} 2s ease-in-out infinite;
+     animation: ${(props) => props.status} 2s ease-in-out infinite;
 
 
      img{ height: 100%; width: 100%}
 
      @keyframes On {
             0% {
-               box-shadow: 1px 0px 30px 0 var(--color-white);
+               box-shadow: 0px 0px 16px 2px  var(--color-white);
                border: 2.5px solid transparent;
             }
   
             50% {
-               box-shadow: 0px 0px 32px 12px var(--color-Brand1);
+               box-shadow: 0px 0px 16px 2px  var(--color-Brand1);
                border: 2.5px solid var(--color-Brand1);
             }
 
             100% {
-               box-shadow: 1px 0px 30px 0 var(--color-white);
+               box-shadow: 0px 0px 16px 2px  var(--color-white);
                border: 2.5px solid transparent;
             }
      }

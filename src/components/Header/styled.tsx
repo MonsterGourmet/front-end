@@ -3,10 +3,10 @@
 import styled from 'styled-components';
 
 export const SHeader = styled.header`
-  height: 140px;
+  height: 130px;
   width: 100%;
 
-  padding: 15px 15px 5px 15px;
+  padding: 15px 15px 5px 20px;
   border: 1px solid red;
   
   justify-content: space-between;
