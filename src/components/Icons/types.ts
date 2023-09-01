@@ -14,5 +14,7 @@ export interface Type {
      Status: 'Open' | 'Close' 
 }
 
-export type ILogoOnly = Pick<ILogo, 'Status'>
+export interface Il {
+     status: 'On' | 'Off';
+}
 

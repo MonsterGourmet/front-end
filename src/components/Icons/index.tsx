@@ -9,7 +9,7 @@ import { ILogo, Type } from "./types";
 
 export function Logo({Profile, Status}: ILogo): JSX.Element {
      return (
-          <SFigure Status={Status}>
+          <SFigure status={Status}>
                <Link href="https://www.linkedin.com/in/brunoabreudev/">
                     <Image src={Profile} alt="Logo" />
                </Link>
@@ -30,6 +30,12 @@ export function IconCart({Number, Status}: Type): JSX.Element {
                <BsCartX></BsCartX>
           </SIconCart>
      )
+
+     // if(Status === 'Open') {
+     //      return Open(Number, Status)
+     // }else {
+     //      return Close(Status)
+     // }
 
      const TypeCart = Status === 'Open' ? Open(Number, Status) : Close(Status)
 
