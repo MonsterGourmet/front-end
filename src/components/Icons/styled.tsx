@@ -119,7 +119,26 @@ const SIconCart = styled.button<iButton>`
           color: var(--color-Brand1);
      } 
 `
+const SIconTell = styled.div`
+     height: 114%;
+     width: 50px;
+
+     justify-content: center;
+     align-items: center;
+     display: flex;
+
+     border-radius: 20px;
+     border: 1px solid transparent;
+
+     background-color: var(--color-Brand1);
+     color: var(--color-White);
+
+     :first-child{
+          font-size: 28px;
+     }
+
+`
 
 export {
-     SFigure, SIconCart, SBall
+     SFigure, SIconCart, SBall, SIconTell
 }
