@@ -52,6 +52,8 @@ const GlobalStyle = createGlobalStyle`
 		--color-Grey10:#fdfdfd;
 		--color-White:#ffffff;
 
+		--color-font: #1E1E1E;
+
 		--slider-Widht: 250px;
 	}
 
