@@ -1,11 +1,6 @@
-import { SText } from "../Info/styled"
-import { SButton, SButtonCategory, SButtonTell } from "./styled"
-//TODOS: Passe para return implicito
-interface IButtonContact {
-    text: string
-}
+import { SButton, SButtonTell } from "./styled"
 
-interface IButtonCategory {
+interface IButtonContact {
     text: string
 }
 
@@ -18,13 +13,5 @@ export function Button() {
 export function ButtonContact({text}:IButtonContact) {
     return (
         <SButtonTell>{text}</SButtonTell>
-    )
-}
-
-export function ButtonCategory({text}: IButtonCategory) {
-    return (
-        <SButtonCategory>
-            <p>{text}</p>
-        </SButtonCategory>
     )
 }
