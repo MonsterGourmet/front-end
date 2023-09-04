@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SBall, SFigure, SIconCart } from "./styled";
+import { SBall, SFigure, SIconCart, SIconTell } from "./styled";
 
-import { BsCart, BsCartX } from "react-icons/bs";
+import { BsCart, BsCartX, BsFillTelephoneOutboundFill } from "react-icons/bs";
 
 import { ILogo, Type } from "./types";
 
@@ -14,6 +14,14 @@ export function Logo({Profile, Status}: ILogo): JSX.Element {
                     <Image src={Profile} alt="Logo" />
                </Link>
           </SFigure>
+     )
+}
+
+export function IconTell() {
+     return (
+          <SIconTell>
+               <BsFillTelephoneOutboundFill></BsFillTelephoneOutboundFill>
+          </SIconTell>
      )
 }
 
@@ -30,13 +38,7 @@ export function IconCart({Number, Status}: Type): JSX.Element {
                <BsCartX></BsCartX>
           </SIconCart>
      )
-
-     // if(Status === 'Open') {
-     //      return Open(Number, Status)
-     // }else {
-     //      return Close(Status)
-     // }
-
+     
      const TypeCart = Status === 'Open' ? Open(Number, Status) : Close(Status)
 
      return TypeCart

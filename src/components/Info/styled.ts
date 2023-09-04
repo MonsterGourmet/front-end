@@ -2,7 +2,7 @@
 import { styled } from "styled-components"
 
 const SInfo = styled.section`
-     height: 200px;
+     min-height: 200px;
      width: 100%;
 
      border: 1px solid red;
@@ -11,20 +11,38 @@ const SInfo = styled.section`
 
      flex-direction: column;
      display: flex;
-     gap: 10px;
+     gap: 15px;
+
+     color: var(--color-Grey4);
+
+     h1{
+          color: var(--color-Grey0); 
+     }
 ` 
 
 const SText = styled.p`
-     color: var(--color-Grey0);
-   
      span{
           color: var(--color-Brand1);
 
           font-weight: 700;
      }
-
 `
 
+const SContact = styled.div`
+     height: 40px;
+     width: 165px;
+
+     border-radius: 20px;
+     border: 3px solid var(--color-Brand1);
+
+     flex-direction: row;
+     justify-content: flex-start;
+     display: flex;
+     align-items: center;
+
+
+     position: relative;
+`
 export {
-     SText, SInfo
+     SText, SInfo, SContact
 }
