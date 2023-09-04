@@ -29,7 +29,7 @@ const SProduct = styled.li`
      &:hover{
           background-color: var(--color-Brand1);
 
-          box-shadow: 0px 0px 1px 1px var(--color-DropShow);
+          box-shadow: 0px 10px 10px 0px var(--color-DropShow);
 
           border: 2.5px solid var(--color-White);
      }
