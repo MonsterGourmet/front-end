@@ -8,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
 
     box-sizing: border-box;
+
+    list-style-type: none;
   }
 
   button {
@@ -35,9 +37,12 @@ const GlobalStyle = createGlobalStyle`
 		--color-Random12: #30007d;
 
 		--color-Brand1: #F77A20;
+		--color-Brand1-75: #F77A20BF;
 		--color-Brand2: #5126ea;
 		--color-Brand3: #b0a6f0;
 		--color-Brand4: #edeafd;
+
+		--color-DropShow: #1a1919a6;
 
 		--color-Grey0: #0b0d0d;
 		--color-Grey1: #212529;
@@ -55,6 +60,7 @@ const GlobalStyle = createGlobalStyle`
 		--color-font: #1E1E1E;
 
 		--slider-Widht: 250px;
+
 	}
 
 `;
