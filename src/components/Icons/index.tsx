@@ -38,13 +38,7 @@ export function IconCart({Number, Status}: Type): JSX.Element {
                <BsCartX></BsCartX>
           </SIconCart>
      )
-
-     // if(Status === 'Open') {
-     //      return Open(Number, Status)
-     // }else {
-     //      return Close(Status)
-     // }
-
+     
      const TypeCart = Status === 'Open' ? Open(Number, Status) : Close(Status)
 
      return TypeCart

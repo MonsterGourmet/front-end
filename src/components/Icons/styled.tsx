@@ -16,7 +16,6 @@ const SFigure = styled.figure<Il>`
 
      animation: ${(props) => props.status} 2s ease-in-out infinite;
 
-
      img{ height: 100%; width: 100%}
 
      @keyframes On {
@@ -136,7 +135,6 @@ const SIconTell = styled.div`
      :first-child{
           font-size: 28px;
      }
-
 `
 
 export {
