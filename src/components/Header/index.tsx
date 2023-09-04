@@ -18,17 +18,17 @@ export function Header() {
     
     const [ stts, setStts] = useState<'Open' | 'Close' >('Close')
 
-    setInterval(()=>{setHour(time.getHours()); setMinute(time.getMinutes())},58000)
+    setInterval(()=>setMinute(time.getMinutes()),58000)
 
-    // Troca minuto por hora
+    // Troca minuto por hora, quando for fechar a compra verifique a hora.
     useEffect(() => {
-        setHour(time.getHours());
-        setMinute(time.getMinutes());
-
-        if (minute >= 0 && minute < 10)  {
+        if (minute >= 1 && minute < 19)  {
             setStts('Open');
         } 
 
+        if( minute >= 11){
+            setStts('Close');
+        }
     }, [minute]);
 
     return (
