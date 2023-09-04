@@ -7,7 +7,8 @@ const SInfo = styled.section`
 
      border: 1px solid red;
 
-     padding: 15px;
+     padding:  15px;
+     margin:   10px 0 20px 0;
 
      flex-direction: column;
      display: flex;

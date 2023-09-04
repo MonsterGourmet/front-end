@@ -7,7 +7,7 @@ export const SHeader = styled.header`
   width: 100%;
 
   padding: 15px 15px 5px 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   
   justify-content: space-between;
   flex-direction: row;
