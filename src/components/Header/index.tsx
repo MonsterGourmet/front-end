@@ -22,11 +22,11 @@ export function Header() {
 
     // Troca minuto por hora, quando for fechar a compra verifique a hora.
     useEffect(() => {
-        if (minute >= 1 && minute < 19)  {
+        if (minute >= 17 && minute < 23)  {
             setStts('Open');
         } 
 
-        if( minute >= 11){
+        if( minute >= 23){
             setStts('Close');
         }
     }, [minute]);
