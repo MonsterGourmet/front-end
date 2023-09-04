@@ -1,14 +1,12 @@
-import { Categories } from '@/components/Categories'
-import { Header } from '@/components/Header'
-import { Information } from '@/components/Info'
+import { Categories, Header, Information, Menu } from '@/components'
 
 const Home = () => (
   <>
     <Header/>
     <Information />
     <Categories />
+    <Menu />
   </>
-
 )
 
 export default Home
