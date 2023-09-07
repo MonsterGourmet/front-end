@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 		--color-Brand3: #b0a6f0;
 		--color-Brand4: #edeafd;
 
-		--color-DropShow: #1a1919a6;
+		--color-DropShow: #3333338c;
 
 		--color-Grey0: #0b0d0d;
 		--color-Grey1: #212529;
