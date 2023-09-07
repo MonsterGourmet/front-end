@@ -1,9 +1,5 @@
 import Image from "next/image";
-
 import Link from "next/link";
-
-import Monster  from "../../../public/IconMonster.jpg"
-
 
 import { SBall, SFigure, SIconCart, SIconTell } from "./styled";
 
@@ -47,9 +43,3 @@ export function IconCart({Number, Status}: Type): JSX.Element {
 
      return TypeCart
 }
-
-export function IconLion() {
-     return (
-          <Image className={"Icon"} src={Monster} alt="Logo" />
-     )
-} //TODOS: Conlued Component

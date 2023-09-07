@@ -1,9 +1,11 @@
 'use client'
 import { styled } from "styled-components"
 
-const SContainerInfo = styled.section`
+const SInfo = styled.section`
      min-height: 200px;
      width: 100%;
+
+     border: 1px solid red;
 
      padding:  15px;
      margin:   10px 0 20px 0;
@@ -34,13 +36,14 @@ const SContact = styled.div`
      border-radius: 20px;
      border: 3px solid var(--color-Brand1);
 
-     justify-content: flex-start;
      flex-direction: row;
-     align-items: center;
+     justify-content: flex-start;
      display: flex;
+     align-items: center;
+
 
      position: relative;
 `
 export {
-     SText, SContainerInfo, SContact
+     SText, SInfo, SContact
 }
