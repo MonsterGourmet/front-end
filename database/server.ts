@@ -6,18 +6,24 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-Burguer.png",
           products: [
                {
-                    name: 'Lanche',
-                    carnes: '2x'
-               }
+                    name: 'Monster SA',
+                    carnes: '2x',
+                    price: 12.00
+               },
+               {
+                    name: 'Tauros',
+                    carnes: '2x',
+                    price: 12.00
+               },
           ]
      },
      {
-          category: 'Batata',
+          category: 'Batata Frita',
           imgURL: "/Photo-Potatos.png",
           products: [
                {
-                    name: 'Lanche',
-                    carnes: '2x'
+                    name: 'Batata Tradicional',
+                    price: 12.00
                }
           ]
      },
@@ -26,9 +32,31 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-HotDog.png",
           products: [
                {
-                    name: 'Lanche',
-                    carnes: '2x'
+                    name: 'Dog Preenssado',
+                    price: 12.00
+               }
+          ]
+     },
+     {
+          category: 'Bebidas',
+          imgURL: "/Photo-Burguer.png",
+          products: [
+               {
+                    name: 'Coca',
+                    price: 12.00
+               }
+          ]
+     },
+     {
+          category: 'Milk Shake',
+          imgURL: "/Photo-Burguer.png",
+          products: [
+               {
+                    name: 'Milk Shack de Morango',
+                    price: 12.00
                }
           ]
      },
 ]
+
+
