@@ -1,9 +1,6 @@
-import { Menu } from "@/components/Menu"
-import { Header } from "@/components/Header"
-import { Categories } from "@/components/Categories"
-import { Information } from "@/components/Info"
+import { Categories, Footer, Header, Information, Menu } from "@/components"
 
-//TODOS: Clean Code, Organization, Desacoplamento, Details
+//TODOS: Clean Code, Organization, Desacoplamento, Details, DefaultCode(Prettier and Eslinter), 'use client', CSS Advanced.
 
 const Home = () => (
   <>
@@ -11,6 +8,7 @@ const Home = () => (
     <Information />
     <Categories />
     <Menu />
+    <Footer />
   </>
 )
 
