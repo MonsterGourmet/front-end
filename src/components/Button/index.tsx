@@ -1,10 +1,3 @@
-import Image from "next/image";
-
-import  Monster  from "../../../public/IconMonster.jpg"
-
-import { SText } from "../Menu/styled"
-
-import { useState } from "react";
 import { AiOutlinePlus } from 'react-icons/ai'
 import { BsFillCartCheckFill } from 'react-icons/bs'
 

@@ -42,8 +42,6 @@ const GlobalStyle = createGlobalStyle`
 		--color-Brand3: #b0a6f0;
 		--color-Brand4: #edeafd;
 
-		--color-DropShow: #1a1919a6;
-
 		--color-Grey0: #0b0d0d;
 		--color-Grey1: #212529;
 		--color-Grey2: #495057;
@@ -59,7 +57,16 @@ const GlobalStyle = createGlobalStyle`
 
 		--color-font: #1E1E1E;
 
+		--color-DropShow: #1a1919a6;
+
 		--slider-Widht: 250px;
+
+		--font-1: 1rem;
+		--font-2: 2rem;
+		--font-3: 3rem;
+		
+		--container-Width: 100%;
+		--container-Padding: 10px;
 
 	}
 

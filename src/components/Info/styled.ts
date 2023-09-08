@@ -1,26 +1,11 @@
 'use client'
+
 import { styled } from "styled-components"
 
 const SInfo = styled.section`
      min-height: 200px;
      width: 100%;
-
-     border: 1px solid red;
-
-     padding:  15px;
-     margin:   10px 0 20px 0;
-
-     flex-direction: column;
-     display: flex;
-     gap: 15px;
-
-     color: var(--color-Grey4);
-
-     h1{
-          color: var(--color-Grey0); 
-     }
 ` 
-
 const SText = styled.p`
      span{
           color: var(--color-Brand1);
@@ -28,7 +13,6 @@ const SText = styled.p`
           font-weight: 700;
      }
 `
-
 const SContact = styled.div`
      height: 40px;
      width: 165px;
@@ -44,6 +28,25 @@ const SContact = styled.div`
 
      position: relative;
 `
+const SContainerInformation = styled.div`
+     height: 100%;
+     width: var(--container-Width);
+     
+     border: 1px solid red;
+
+     padding:  15px;
+     margin:   10px 0 20px 0;
+
+     flex-direction: column;
+     display: flex;
+     gap: 15px;
+
+     color: var(--color-Grey4);
+
+     :where(h1){
+          color: var(--color-Grey0); 
+     }
+`
 export {
-     SText, SInfo, SContact
+     SText, SInfo, SContact, SContainerInformation
 }
