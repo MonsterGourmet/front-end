@@ -2,7 +2,7 @@
 
 import Profile from "../../../public/LogoOficcial.png"
 
-import { IconCart, Logo } from "../Icons"
+import { IconCart, LogoImage } from "../Icons"
 
 import { useEffect, useState } from "react"
 
@@ -33,7 +33,7 @@ export function Header() {
 
     return (
         <SHeader>
-            <Logo       Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
+            <LogoImage       Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
             <IconCart   Number={2}          Status={stts}/>
         </SHeader>
     )

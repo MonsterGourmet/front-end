@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const SHeader = styled.header`
   height: 130px;
-  width: 100%;
+  width: var(--container-Width);
 
   padding: 15px 15px 5px 20px;
   /* border: 1px solid red; */

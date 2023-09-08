@@ -7,7 +7,7 @@ import { BsCart, BsCartX, BsFillTelephoneOutboundFill } from "react-icons/bs";
 
 import { ILogo, Type } from "./types";
 
-export function Logo({Profile, Status}: ILogo): JSX.Element {
+export function LogoImage({Profile, Status}: ILogo): JSX.Element {
      return (
           <SFigure status={Status}>
                <Link href="https://www.linkedin.com/in/brunoabreudev/">
@@ -17,6 +17,15 @@ export function Logo({Profile, Status}: ILogo): JSX.Element {
      )
 }
 
+export function LogoText({Profile, Status}: ILogo): JSX.Element {
+     return (
+          <SFigure status={Status}>
+               <Link href="https://www.linkedin.com/in/brunoabreudev/">
+                    <Image src={Profile} alt="Logo" />
+               </Link>
+          </SFigure>
+     )
+}
 export function IconTell() {
      return (
           <SIconTell>
