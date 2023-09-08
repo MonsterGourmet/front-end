@@ -2,11 +2,16 @@
 
 import { styled } from "styled-components";
 
-const SContainerCatagorie = styled.section`
+const SCategorie = styled.section`
      height: 355px;
      width: 100%;
+`
 
-     padding: 5px 0;
+const SContainerCatagorie = styled.section`
+     height: 100%;
+     width: var(--container-Width);
+
+     padding: 5px 10px;
      margin: 20px 0;
 
      justify-content: center;
@@ -30,4 +35,4 @@ const SListProductsHorizontal = styled.ul`
      gap: 10px;
 `
 
-export { SContainerCatagorie, SListProductsHorizontal }
+export { SCategorie, SContainerCatagorie, SListProductsHorizontal }
