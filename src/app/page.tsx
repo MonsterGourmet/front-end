@@ -1,6 +1,7 @@
 import { Categories, Footer, Header, Information, Menu } from "@/components"
+import { Modal } from "@/components/Modal"
 
-//TODOS: Clean Code, Organization, Desacoplamento, Details, DefaultCode(Prettier and Eslinter), 'use client', CSS Advanced.
+//TODOS: Semantic, Align, Clean Code, Organization, Desacoplamento, Details, DefaultCode(Prettier and Eslinter), 'use client', CSS Advanced.
 
 const Home = () => (
   <>
@@ -9,6 +10,7 @@ const Home = () => (
     <Categories />
     <Menu />
     <Footer />
+    <Modal />
   </>
 )
 

@@ -1,8 +1,8 @@
 import { SText } from "../Info/styled";
-import { Product } from "./Product";
 import { loadDataOnCategory } from "../../../database/server";
 
 import { SCategorie, SContainerCatagorie, SListProductsHorizontal } from "./styled";
+import { Product } from "./Product";
 
 
 export function Categories() {

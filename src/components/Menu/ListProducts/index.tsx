@@ -6,7 +6,7 @@ import { SList } from "./style";
 
 export function ListCard() {
 
-     const filter = 'Burguers'
+     const filter = 'Burguer'
 
      const filteredList = loadDataOnCategory.filter( item => item.category === filter )
      const list = filteredList[0].products

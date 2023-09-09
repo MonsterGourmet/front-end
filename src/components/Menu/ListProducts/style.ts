@@ -12,11 +12,11 @@ const SList = styled.ul`
 
      transition: 200ms ease-in;
 
-     justify-content: flex-start;
+     /* justify-content: flex-start; */
      flex-direction: column;
      align-items: center;
      display: flex;
-     gap: 12px;
+     gap: 25px;
 
      overflow-y: auto;
 
