@@ -2,7 +2,7 @@
 
 export const loadDataOnCategory = [
      {
-          category: 'Burguers',
+          category: 'Burguer',
           imgURL: "/Photo-Burguer.png",
           products: [
                {
@@ -14,6 +14,16 @@ export const loadDataOnCategory = [
                     name: 'Tauros',
                     carnes: '2x',
                     price: 12.00
+               },
+               {
+                    name: 'Feroz',
+                    carnes: '2x',
+                    price: 15.00
+               },
+               {
+                    name: 'Duplo Monster',
+                    carnes: '2x',
+                    price: 22.90
                },
           ]
      },
@@ -28,7 +38,7 @@ export const loadDataOnCategory = [
           ]
      },
      {
-          category: 'Hot Dogs',
+          category: 'Hot Dog',
           imgURL: "/Photo-HotDog.png",
           products: [
                {
@@ -38,7 +48,7 @@ export const loadDataOnCategory = [
           ]
      },
      {
-          category: 'Bebidas',
+          category: 'Bebida',
           imgURL: "/Photo-Burguer.png",
           products: [
                {
