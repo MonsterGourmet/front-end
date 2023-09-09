@@ -2,7 +2,7 @@
 import { styled } from "styled-components";
 
 const SContainerMenu = styled.section`
-     height: 600px;
+     height: 700px;
      width: 100%;
 
      border: 2px solid transparent;

@@ -3,6 +3,7 @@ import GlobalStyle from '@/styles/_globalStyled'
 
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
+import { relative } from 'path'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{position: 'relative'}}>
         <GlobalStyle />
         <StyledConfig>{children}</StyledConfig>
-        </body>
+      </body>
     </html>
   )
 }

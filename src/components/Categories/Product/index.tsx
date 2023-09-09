@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { SText } from "@/components/Info/styled";
-import { SFigure, SProduct } from "./styled";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-import Lanche from "../../../../public/Photo-Burguer.png"
+import { SText } from "@/components/Info/styled";
+
+import { SFigure, SProduct } from "./styled";
 
 interface IProduct {
   product: {

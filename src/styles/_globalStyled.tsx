@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
 		--color-font: #1E1E1E;
 
 		--color-DropShow: #1a1919a6;
+		--color-Wrapper: #060605bf;
 
 		--slider-Widht: 250px;
 

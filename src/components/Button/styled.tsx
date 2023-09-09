@@ -29,8 +29,8 @@ export const SButtonTell = styled.button`
 `
 
 export const SButtonAdd = styled.button`
-  height: 42px;
-  width: 46px;
+  height: 35px;
+  width: 40px;
 
   border-radius: 100%;
   border: 1px solid var(--color-Brand1);
