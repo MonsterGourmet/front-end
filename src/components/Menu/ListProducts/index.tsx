@@ -2,7 +2,7 @@
 import { loadDataOnCategory } from "../../../../database/server";
 import { Card } from "./Card";
 
-import * as S from "./style";
+import * as S from "./styled";
 
 export function ListCard() {
 

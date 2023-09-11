@@ -13,7 +13,6 @@ import { loadDataOnCategory } from "../../../database/server"
 import { SContainerModal, SModal, SText, SWrapper } from "./styled"
 import { ButtonCloseModal } from "../Button"
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export function ModalVisibilityControl() {
@@ -27,8 +26,6 @@ export function ModalVisibilityControl() {
 }
 
 function Modal(infos: any) {
- 
- 
      return (
                <SWrapper>
                     <SModal>

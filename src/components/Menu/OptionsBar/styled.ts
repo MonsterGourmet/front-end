@@ -46,8 +46,7 @@ const NavBarHorizontal = styled.nav`
           }  
      } */
 `
-
-const SOption = styled.li`
+const Option = styled.li`
      height: 40px;
      min-width: 130px;
 
@@ -113,4 +112,4 @@ const SOption = styled.li`
      }
 `
 
-export { NavBarHorizontal, SOption }
+export { NavBarHorizontal, Option }

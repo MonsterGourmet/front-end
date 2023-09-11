@@ -2,12 +2,11 @@
 
 import styled from 'styled-components';
 
-export const SHeader = styled.header`
+const Header = styled.header`
   height: 130px;
   width: var(--container-Width);
 
   padding: 15px 15px 5px 20px;
-  /* border: 1px solid red; */
   
   justify-content: space-between;
   flex-direction: row;
@@ -15,5 +14,5 @@ export const SHeader = styled.header`
   display: flex;
 
   transition: 200ms linear;
-`;
-
+`
+export { Header }

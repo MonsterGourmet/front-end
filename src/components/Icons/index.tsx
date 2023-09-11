@@ -1,51 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SBall, SFigure, SIconCart, SIconTell } from "./styled";
+import * as S from "./styled"
+
+import * as I from "./types"
+
 
 import { BsCart, BsCartX, BsFillTelephoneOutboundFill } from "react-icons/bs";
 
-import { ILogo, Type } from "./types";
-
-export function LogoImage({Profile, Status}: ILogo): JSX.Element {
+export function LogoImage({Profile, Status}: I.Logo): JSX.Element {
      return (
-          <SFigure status={Status}>
+          <S.Figure status={Status}>
                <Link href="https://www.linkedin.com/in/brunoabreudev/">
                     <Image src={Profile} alt="Logo" />
                </Link>
-          </SFigure>
+          </S.Figure>
      )
 }
 
-export function LogoText({Profile, Status}: ILogo): JSX.Element {
+export function LogoText({Profile, Status}: I.Logo): JSX.Element {
      return (
-          <SFigure status={Status}>
+          <S.Figure status={Status}>
                <Link href="https://www.linkedin.com/in/brunoabreudev/">
                     <Image src={Profile} alt="Logo" />
                </Link>
-          </SFigure>
+          </S.Figure>
      )
 }
 export function IconTell() {
      return (
-          <SIconTell>
+          <S.IconTell>
                <BsFillTelephoneOutboundFill></BsFillTelephoneOutboundFill>
-          </SIconTell>
+          </S.IconTell>
      )
 }
 
-export function IconCart({Number, Status}: Type): JSX.Element {
+export function IconCart({Number, Status}: I.Type): JSX.Element {
      const Open = (Number: number, Status: 'Open' | 'Close'): JSX.Element => (
-          <SIconCart status={Status}>
+          <S.IconCart status={Status}>
                <BsCart></BsCart>
-               <SBall>{Number}</SBall>
-          </SIconCart>
+               <S.Ball>{Number}</S.Ball>
+          </S.IconCart>
      )
 
      const Close = ( Status: 'Open' | 'Close'): JSX.Element => (
-          <SIconCart status={Status}>
+          <S.IconCart status={Status}>
                <BsCartX></BsCartX>
-          </SIconCart>
+          </S.IconCart>
      )
      
      const TypeCart = Status === 'Open' ? Open(Number, Status) : Close(Status)

@@ -1,4 +1,4 @@
-export default function swapThemes( status: string){
+export default function swapThemes(status: string){
      const theme = {
           backgroundColor: '',
           hover: '',

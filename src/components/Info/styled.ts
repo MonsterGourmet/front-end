@@ -2,18 +2,18 @@
 
 import { styled } from "styled-components"
 
-const SInfo = styled.section`
+const Info = styled.section`
      min-height: 200px;
      width: 100%;
 ` 
-const SText = styled.p`
+const Text = styled.p`
      span{
           color: var(--color-Brand1);
 
           font-weight: 700;
      }
 `
-const SContact = styled.div`
+const Contact = styled.div`
      height: 40px;
      width: 165px;
 
@@ -25,15 +25,12 @@ const SContact = styled.div`
      display: flex;
      align-items: center;
 
-
      position: relative;
 `
-const SContainerInformation = styled.div`
+const ContainerInformation = styled.div`
      height: 100%;
      width: var(--container-Width);
      
-     border: 1px solid red;
-
      padding:  15px;
      margin:   10px 0 20px 0;
 
@@ -48,5 +45,5 @@ const SContainerInformation = styled.div`
      }
 `
 export {
-     SText, SInfo, SContact, SContainerInformation
+     Text, Info, Contact, ContainerInformation
 }

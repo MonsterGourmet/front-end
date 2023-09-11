@@ -1,10 +1,11 @@
 'use client'
-import { styled } from "styled-components";
+import * as I from "./types"
 
 import swapThemes from "./utils";
-import { Il, iButton } from "./types";
 
-const SFigure = styled.figure<Il>`
+import { styled } from "styled-components";
+
+const Figure = styled.figure<I.Il>`
      height: 105px;
      width: 105px;
     
@@ -52,7 +53,7 @@ const SFigure = styled.figure<Il>`
             }
      }
 `
-const SBall = styled.div`
+const Ball = styled.div`
      height: 30px;
      width: 30px;
 
@@ -70,7 +71,7 @@ const SBall = styled.div`
      align-items: center;
      display: flex;
 `
-const SIconCart = styled.button<iButton>`
+const IconCart = styled.button<I.Button>`
      height: 55px;
      width: 55px;
 
@@ -111,14 +112,14 @@ const SIconCart = styled.button<iButton>`
 
      }
 
-     &:hover ${SBall}{
+     &:hover ${Ball}{
           border: var(--color-White) 1px solid;
           background: var(--color-White);
 
           color: var(--color-Brand1);
      } 
 `
-const SIconTell = styled.div`
+const IconTell = styled.div`
      height: 114%;
      width: 50px;
 
@@ -138,5 +139,5 @@ const SIconTell = styled.div`
 `
 
 export {
-     SFigure, SIconCart, SBall, SIconTell
+     Figure, IconCart, Ball, IconTell
 }

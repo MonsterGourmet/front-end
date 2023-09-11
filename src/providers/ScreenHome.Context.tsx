@@ -24,13 +24,11 @@ const HomeProvider = ({ children }: any) => {
       alteredInfoModal: (info: any) => set({ infoModal:{ type: info.type, Model: info.Model}}),
   }))
 
-  //TODOS: Daqui pra cima colocar em uma pasta, podemos usar o zustando como useContext e como UseState. Tente fazer injeão de dependencia.
- 
-    return ( 
-      <ScreenHomeContext.Provider 
-       value={{ useModalStore }}> {children} 
-      </ScreenHomeContext.Provider>     
-    )
+  return ( 
+    <ScreenHomeContext.Provider 
+      value={{ useModalStore }}> {children} 
+    </ScreenHomeContext.Provider>     
+  )
 }
 
 export default HomeProvider;

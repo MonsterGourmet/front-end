@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 
-export interface iButton  {
+export interface Button  {
      status: 'Open' | 'Close';
 }
 
-export interface ILogo {
+export interface Logo {
      Profile: StaticImageData,
      Status: 'On' | 'Off';
 }

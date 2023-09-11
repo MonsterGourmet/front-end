@@ -1,35 +1,35 @@
 'use client'
 
+import * as S from "./styled"
+
+import Image from "next/image"
+
 import  Monster  from "../../../../public/IconMonster.jpg"
 
-
-import { SText } from "../styled";
+import { Text } from "../styled";
 
 import { useState } from "react";
 
 import { loadDataOnCategory } from "../../../../database/server";
 
-import { NavBarHorizontal, SOption } from "./styled";
-
-import Image from "next/image";
 
 export function Options() {
      const [ optionSelected, setOptionSelected] = useState('all')
 
      return (
-          <NavBarHorizontal>
+          <S.NavBarHorizontal>
                <ul>
                {
                     loadDataOnCategory.map(item => {
                          return(
-                              <SOption key={item.category} onClick={()=>setOptionSelected(item.category)}>
-                                  <SText className={"Option"}>{item.category}</SText>
+                              <S.Option key={item.category} onClick={()=>setOptionSelected(item.category)}>
+                                  <Text className={"Option"}>{item.category}</Text>
                                   <Image className={"Icon"} src={Monster} alt="Logo" />
-                              </SOption>
+                              </S.Option>
                          )
                     })
                }
                </ul>
-          </NavBarHorizontal>
+          </S.NavBarHorizontal>
      )
 }

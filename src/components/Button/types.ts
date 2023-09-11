@@ -1,4 +1,4 @@
-export interface IButtonContact {
+export interface ButtonContact {
      text: string
 }
  

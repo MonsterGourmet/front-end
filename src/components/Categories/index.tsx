@@ -1,12 +1,20 @@
 'use client'
-import { SText } from "../Info/styled";
+
+import * as S from "./styled"
+
+import { Text } from "../Info/styled";
+
+import { Inter } from "next/font/google"
+
+import { Product } from "./Product";
+
+import { useContext } from "react";
+
 import { loadDataOnCategory } from "../../../database/server";
 
-import { SCategorie, SContainerCatagorie, SListProductsHorizontal } from "./styled";
-import { Product } from "./Product";
-import { useContext } from "react";
 import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
 
+const inter = Inter({ subsets: ['latin'] })
 
 export function Categories() {
       const { useModalStore } = useContext(ScreenHomeContext)
@@ -37,17 +45,17 @@ export function Categories() {
       const filteredList = checkCategories(loadDataOnCategory, 'Bebida')
 
       return (
-        <SCategorie>
-            <SContainerCatagorie>
-                  <SText as={'h1'}><span>Categorias</span></SText>
-                  <SListProductsHorizontal>
+        <S.Categorie className={inter.className}>
+            <S.ContainerCategorie>
+                  <Text as={'h1'}><span>Categorias</span></Text>
+                  <S.ListProductsHorizontal>
                      {
                         filteredList.map( (item:any) => (
                            <Product onClick={()=>handleClick(item)} key={item.category} product={item} />
                         ))
                      }
-                  </SListProductsHorizontal>
-            </SContainerCatagorie>
-        </SCategorie>
+                  </S.ListProductsHorizontal>
+            </S.ContainerCategorie>
+        </S.Categorie>
      )
 }

@@ -2,7 +2,7 @@
 
 import { styled } from "styled-components"
 
-const SText = styled.p`
+const Text = styled.p`
      color: var(--color-White);
 
      span{
@@ -12,13 +12,13 @@ const SText = styled.p`
      }
 `
 
-const SFooter = styled.footer`
+const Footer = styled.footer`
      height: 200px;
      width: 100%;
 
      background-color: var(--color-Grey0);
 `
-const SContainerFooter = styled.div`
+const ContainerFooter = styled.div`
      height: 100%;
      width: var(--container-Width);
 
@@ -29,4 +29,4 @@ const SContainerFooter = styled.div`
      align-items: center;
      display: flex;
 `
-export { SText, SFooter, SContainerFooter } 
+export { Text, Footer, ContainerFooter } 
