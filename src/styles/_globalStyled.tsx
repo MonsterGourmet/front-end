@@ -9,8 +9,11 @@ const GlobalStyle = createGlobalStyle`
 
     box-sizing: border-box;
 
+    /* font-family: 'Inter', sans-serif; */
+
     list-style-type: none;
   }
+
 
   button {
 	cursor: pointer;

@@ -1,34 +1,48 @@
+'use client'
+
 import { Inter } from "next/font/google"
 
 import { InfoCard } from "../Categories/CardInfo"
 
+import { useContext } from "react"
+
+import { ScreenHomeContext } from "@/providers/ScreenHome.Context"
+
 import { loadDataOnCategory } from "../../../database/server"
 
 import { SContainerModal, SModal, SText, SWrapper } from "./styled"
+import { ButtonCloseModal } from "../Button"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
-export function Modal() {
-     const infos = {
-          type: 'Burguer',
-          Model: 'Food'
-     }
+export function ModalVisibilityControl() {
+     const { useModalStore } = useContext(ScreenHomeContext)
 
+     const info = useModalStore((state:any) => state.infoModal)
+
+     const toggleModal = useModalStore((state:any) => state.sttsModal)
+
+     return toggleModal ? Modal(info) : null 
+}
+
+function Modal(infos: any) {
+ 
+ 
      return (
-          <SWrapper>
-               <SModal>
-                    <SContainerModal>
-                         <ContentModal info={infos} />
-                    </SContainerModal>
-               </SModal>
-          </SWrapper>
+               <SWrapper>
+                    <SModal>
+                         <ButtonCloseModal ConfigCss={'bttnClose'}  />
+                         <SContainerModal>
+                              <ContentModal info={infos} />
+                         </SContainerModal>
+                    </SModal>
+               </SWrapper>
      )
 }
 
 function ContentModal({info}: any) {
      const { type, Model } = info     
-
-     const productsRepository = loadDataOnCategory
 
      const Default = () => {
           return (
@@ -39,6 +53,9 @@ function ContentModal({info}: any) {
      }
  
      const Food = (type:any) => {
+
+          const productsRepository = loadDataOnCategory
+
           const filteredList = productsRepository.filter( session => session.category === type )
 
           const currentList = filteredList[0].products
@@ -48,8 +65,7 @@ function ContentModal({info}: any) {
                     <SText as={'h1'} className={inter.className}><span>{type}</span></SText>
                     <ul className="List">
                          {
-                              currentList.map( product => <InfoCard key={product.name} />)
-
+                              currentList.map( product => <InfoCard key={product.name} Product={product}/>)
                          }
                     </ul>
                </>

@@ -18,23 +18,19 @@ const SWrapper = styled.section`
      display: flex;
 
 `
-
 const SText = styled.p`
      color: var(--color-White);
 
      span{
           color: var(--color-Brand1);
+          
           font-size: 32px;
           font-weight: 700;
           line-height: 39px;
-          letter-spacing: 0em;
           text-align: left;
-
-
-          font-weight: 400;
+          font-weight: 700;
      }
 `
-
 const SModal = styled.aside`
      height: 500px;
      width: min(325px,90%);
@@ -44,7 +40,30 @@ const SModal = styled.aside`
      border-radius: 20px;
      border: 2.5px solid var(--color-Brand1);
 
+     position: relative;
+
      z-index: 6;
+
+     .bttnClose{
+          position: absolute;
+          right: 10px; top: 10px; 
+
+          z-index: 7;
+     }
+
+     animation: slideElliptc 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+@keyframes slideElliptc {
+     0% {
+          transform: translateY(600px) rotateX(30deg) scale(0);
+          transform-origin: 50% 100%;
+          opacity: 0;
+     }
+     100% {
+          transform: translateY(0) rotateX(0) scale(1);
+          transform-origin: 50% -1400px;
+          opacity: 1;
+     }}
 `
 
 const SContainerModal = styled.div`
@@ -64,8 +83,6 @@ const SContainerModal = styled.div`
           
           padding: 10px 5px;
           
-          border: 1px solid red;
-
           overflow-y: auto;
 
           justify-content: flex-start;

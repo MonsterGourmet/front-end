@@ -1,10 +1,9 @@
 import StyledConfig from '@/styles/_styled.config'
 import GlobalStyle from '@/styles/_globalStyled'
 
-import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
-import { relative } from 'path'
 
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className} style={{position: 'relative'}}>
-        <GlobalStyle />
-        <StyledConfig>{children}</StyledConfig>
-      </body>
-    </html>
+      <html lang="en">
+        <body style={{position: 'relative'}}>
+          <GlobalStyle />
+          <StyledConfig>{children}</StyledConfig>
+        </body>
+      </html>
   )
 }

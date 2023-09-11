@@ -6,7 +6,6 @@ const SCategorie = styled.section`
      height: 355px;
      width: 100%;
 `
-
 const SContainerCatagorie = styled.section`
      height: 100%;
      width: var(--container-Width);
@@ -20,7 +19,6 @@ const SContainerCatagorie = styled.section`
      display: flex;
      gap: 10px;
 `
-
 const SListProductsHorizontal = styled.ul`
      height: 344px;
      width: 100%;

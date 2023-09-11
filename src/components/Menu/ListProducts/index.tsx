@@ -2,7 +2,7 @@
 import { loadDataOnCategory } from "../../../../database/server";
 import { Card } from "./Card";
 
-import { SList } from "./style";
+import * as S from "./style";
 
 export function ListCard() {
 
@@ -12,12 +12,12 @@ export function ListCard() {
      const list = filteredList[0].products
 
      return (
-          <SList>
+          <S.SList>
                {
                     list.map( Product => (
                          <Card key={Product.name} Product={Product} />
                     ))
                }
-          </SList>
+          </S.SList>
      )
-}
+}    
