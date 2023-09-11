@@ -7,7 +7,9 @@ export const loadDataOnCategory = [
           products: [
                {
                     name: 'Monster SA',
-                    carnes: '2x',
+                    bread: 'Pão de hamburguer.',
+                    carnes: '1x Carne - Artesanal',
+                    salad: 'Alface, Tomate, Milho, Ervilha.',
                     price: 12.00
                },
                {
@@ -53,6 +55,7 @@ export const loadDataOnCategory = [
           products: [
                {
                     name: 'Coca',
+                    imgURL: "/Photo-Burguer.png",
                     price: 12.00
                }
           ]
