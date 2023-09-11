@@ -7,8 +7,7 @@ import { ButtonProps } from './types';
 export const SButton = styled.button`
   width: 50px;
   height: 50px;
-`;
-
+`
 export const SButtonTell = styled.button`
   height: 99%;
   width: 100px;
@@ -27,7 +26,6 @@ export const SButtonTell = styled.button`
 
   text-align: center;  
 `
-
 export const SButtonAdd = styled.button`
   height: 35px;
   width: 40px;
@@ -54,7 +52,31 @@ export const SButtonAdd = styled.button`
   }
 
 `
+export const SButtonClose = styled.button`
+  height: 30px;
+  width: 30px;
 
+  border-radius: 100%;
+  border: 1px solid var(--color-White);
+  
+  background-color: var(--color-Brand1);
+  color: var(--color-White); 
+
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;  
+  display: flex;
+
+  .iconClose{
+    border-radius: 100%;
+    border: 1px solid transparent;
+
+    /* background-color: var(--color-Brand1); */
+    color: var(--color-White);
+
+    font-size: 31px;
+  }
+`
 export const SButtonOption = styled.button<ButtonProps>`
      height: 40px;
      min-width: 130px;

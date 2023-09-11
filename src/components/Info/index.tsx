@@ -1,12 +1,16 @@
+import { Inter } from "next/font/google"
+
 import { IconTell } from "../Icons"
 
 import { ButtonContact } from "../Button"
 
 import { SContact, SContainerInformation, SInfo, SText } from "./styled"
 
+const inter = Inter({ subsets: ['latin'] })
+
 export function Information() {
      return (
-          <SInfo>  
+          <SInfo className={inter.className}>  
                <SContainerInformation>
                     <SText as='h1'>Escolha seu lanche <span>favorito</span></SText>
                     <SText>Aproveite nosso cardapio, realize seu pedido pelo site, e será levado a concluir no nosso Zap de forma <span>rápida</span> e <span>segura</span>.</SText>

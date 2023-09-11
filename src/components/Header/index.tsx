@@ -33,7 +33,7 @@ export function Header() {
 
     return (
         <SHeader>
-            <LogoImage       Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
+            <LogoImage  Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
             <IconCart   Number={2}          Status={stts}/>
         </SHeader>
     )

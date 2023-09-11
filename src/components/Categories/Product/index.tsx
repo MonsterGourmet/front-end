@@ -12,9 +12,9 @@ interface IProduct {
   }
 }
 
-export function Product({ product }:IProduct) {
+export function Product({ product, onClick }:any) {
      return (
-          <SProduct>
+          <SProduct onClick={onClick}>
                <SText as='h1'>{product.category}</SText>
                <SFigure>
                     <Image src={product.imgURL} alt='Product' layout="fill" />
