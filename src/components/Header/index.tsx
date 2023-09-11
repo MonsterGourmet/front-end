@@ -1,4 +1,5 @@
 'use client'
+import * as S from "./styled"
 
 import Profile from "../../../public/LogoOficcial.png"
 
@@ -6,7 +7,6 @@ import { IconCart, LogoImage } from "../Icons"
 
 import { useEffect, useState } from "react"
 
-import { SHeader } from "./styled"
 
 //Todos: Passar para provider, LÓGICA DE DIAS
 
@@ -32,10 +32,10 @@ export function Header() {
     }, [minute]);
 
     return (
-        <SHeader>
+        <S.Header>
             <LogoImage  Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
             <IconCart   Number={2}          Status={stts}/>
-        </SHeader>
+        </S.Header>
     )
  }
  

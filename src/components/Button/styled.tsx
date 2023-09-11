@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 import { ButtonProps } from './types';
 
-export const SButton = styled.button`
+const Button = styled.button`
   width: 50px;
   height: 50px;
 `
-export const SButtonTell = styled.button`
+const ButtonTell = styled.button`
   height: 99%;
   width: 100px;
 
@@ -26,7 +26,7 @@ export const SButtonTell = styled.button`
 
   text-align: center;  
 `
-export const SButtonAdd = styled.button`
+const ButtonAdd = styled.button`
   height: 35px;
   width: 40px;
 
@@ -52,7 +52,7 @@ export const SButtonAdd = styled.button`
   }
 
 `
-export const SButtonClose = styled.button`
+const ButtonClose = styled.button`
   height: 30px;
   width: 30px;
 
@@ -77,7 +77,7 @@ export const SButtonClose = styled.button`
     font-size: 31px;
   }
 `
-export const SButtonOption = styled.button<ButtonProps>`
+const ButtonOption = styled.button<ButtonProps>`
      height: 40px;
      min-width: 130px;
 
@@ -110,3 +110,5 @@ export const SButtonOption = styled.button<ButtonProps>`
           overflow: hidden;
      }
 `
+
+export { Button, ButtonTell, ButtonAdd, ButtonClose, ButtonOption }

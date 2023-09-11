@@ -1,16 +1,21 @@
+import * as S from "./styled"
+
+import { Inter } from "next/font/google"
+
 import { LogoText, Signature } from "@/assets/Logo";
-import { SContainerFooter, SFooter, SText } from "./styled";
+
+const inter = Inter({ subsets: ['latin'] })
 
 export function Footer() {
      return (
-          <SFooter>
-               <SContainerFooter>
+          <S.Footer className={inter.className}>
+               <S.ContainerFooter>
                     <LogoText />
-                    <SText>
+                    <S.Text>
                          <span>Localizada:</span> Pojuca-BA, Rua Antonio Mota
-                    </SText>
+                    </S.Text>
                     <Signature />
-               </SContainerFooter>
-          </SFooter>
+               </S.ContainerFooter>
+          </S.Footer>
      )
 }

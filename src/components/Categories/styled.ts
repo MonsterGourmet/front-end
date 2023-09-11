@@ -2,11 +2,11 @@
 
 import { styled } from "styled-components";
 
-const SCategorie = styled.section`
-     height: 355px;
+const Categorie = styled.section`
+     height: 380px;
      width: 100%;
 `
-const SContainerCatagorie = styled.section`
+const ContainerCategorie = styled.div`
      height: 100%;
      width: var(--container-Width);
 
@@ -18,8 +18,16 @@ const SContainerCatagorie = styled.section`
      align-items: center;
      display: flex;
      gap: 10px;
+
+     ::-webkit-scrollbar {
+          height: 1px;               
+     }
+     ::-webkit-scrollbar-track {
+          background-color: transparent;        
+     }
+
 `
-const SListProductsHorizontal = styled.ul`
+const ListProductsHorizontal = styled.ul`
      height: 344px;
      width: 100%;
 
@@ -33,4 +41,5 @@ const SListProductsHorizontal = styled.ul`
      gap: 10px;
 `
 
-export { SCategorie, SContainerCatagorie, SListProductsHorizontal }
+
+export { Categorie, ContainerCategorie, ListProductsHorizontal }

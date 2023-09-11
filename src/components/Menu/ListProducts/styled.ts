@@ -3,7 +3,7 @@
 import { styled } from "styled-components";
 
 const SList = styled.ul`
-     height: 400px;
+     height: 550px;
      width: 100%;
 
      border: 2px solid transparent;

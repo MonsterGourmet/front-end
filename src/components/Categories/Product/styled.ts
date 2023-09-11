@@ -1,7 +1,19 @@
 'use client'
 import { styled } from "styled-components";
 
-const SProduct = styled.li`
+const Text = styled.p`
+     font-weight: 700;
+     font-size: 25px;
+     line-height: 39px;
+
+     text-shadow: 2.5px 2.5px var(--color-Brand1-75);
+
+     align-self: flex-start;
+
+     color: var(--color-White);
+
+`
+const Product = styled.li`
      min-width: 166px;
      height: 280px;
 
@@ -44,20 +56,19 @@ const SProduct = styled.li`
 
      @keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}     
 
-     h1{
+     /* h1{
           font-weight: 700;
           font-size: 25px;
+          line-height: 39px;
 
           text-shadow: 2.5px 2.5px var(--color-Brand1-75);
-
-          line-height: 39px;
           
           align-self: flex-start;
 
           color: var(--color-White)
-     }
+     } */
 `
-const SFigure = styled.figure`
+const Figure = styled.figure`
      height: 200px;
      width: 200%;
 
@@ -70,4 +81,4 @@ const SFigure = styled.figure`
 
      img{ height: 100%; width: 100%; }
 `
-export { SProduct, SFigure }
+export { Product, Figure, Text }

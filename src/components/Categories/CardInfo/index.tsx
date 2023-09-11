@@ -1,24 +1,23 @@
-import { SBoxInfo, SCardinfo, SFigure, SText } from "./styled";
+import * as S from "./styled";
+
 import { Open_Sans, Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ['latin'] })
 
 const Opens = Open_Sans({ subsets: ['latin'] })
 
-export function InfoCard({Product}:any) {
-     console.log(Product)
-     
+export function InfoCard({Product}:any) {     
      return (
-          <SCardinfo>
-               <SFigure>
+          <S.Cardinfo>
+               <S.Figure>
                     
-               </SFigure>
-               <SBoxInfo className={Opens.className}>
-                    <SText className={inter.className} as='h1'>{Product.name}</SText>
-                    { Product.carnes ? <SText className="description">{Product.carnes}<hr></hr></SText> : null }
-                    { Product.salad ? <SText className="description">Salada - {Product.salad}<hr></hr></SText> : null }
-                    { Product.bread ? <SText className="description">{Product.bread}<hr></hr></SText> : null }                    
-               </SBoxInfo>
-          </SCardinfo>
+               </S.Figure>
+               <S.BoxInfo className={Opens.className}>
+                    <S.Text className={inter.className} as='h1'>{Product.name}</S.Text>
+                    { Product.carnes ? <S.Text className="description">{Product.carnes}<hr></hr></S.Text> : null }
+                    { Product.salad ? <S.Text className="description">Salada - {Product.salad}<hr></hr></S.Text> : null }
+                    { Product.bread ? <S.Text className="description">{Product.bread}<hr></hr></S.Text> : null }                    
+               </S.BoxInfo>
+          </S.Cardinfo>
      )    
 }

@@ -1,11 +1,11 @@
 'use client'
 import { styled } from "styled-components";
 
-const SContainerMenu = styled.section`
+const ContainerMenu = styled.section`
      height: 700px;
      width: 100%;
 
-     border: 2px solid transparent;
+     margin: 20px 0;
 
      justify-content: flex-start;
      flex-direction: column;
@@ -13,7 +13,7 @@ const SContainerMenu = styled.section`
      display: flex;
 `
 
-const SText = styled.p`
+const Text = styled.p`
      font-size: 20px;
      font-weight: 500;
      line-height: 30px;
@@ -27,4 +27,4 @@ const SText = styled.p`
      }
 `
 
-export { SContainerMenu, SText }
+export { ContainerMenu, Text }

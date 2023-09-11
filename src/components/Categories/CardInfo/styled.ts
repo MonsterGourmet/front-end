@@ -2,8 +2,7 @@
 
 import styled from "styled-components";
 
-
-const SCardinfo = styled.li`
+const Cardinfo = styled.li`
      min-height: auto;
      width: 100%;
 
@@ -18,14 +17,14 @@ const SCardinfo = styled.li`
      display: flex;
      gap: 10px;
 `
-const SFigure = styled.figure`
+const Figure = styled.figure`
      height: 75px;
      width: 25%;
 
      border-radius: 10px;
      border: 1px solid yellow;
 `
-const SBoxInfo = styled.div`
+const BoxInfo = styled.div`
      height: 100%;
      width: 70%;
 
@@ -44,7 +43,7 @@ const SBoxInfo = styled.div`
           line-height: 30px;
      }
 `
-const SText = styled.p`
+const Text = styled.p`
      /* font-size: 20px;
      font-weight: 400;
      line-height: 27px; */
@@ -58,4 +57,4 @@ const SText = styled.p`
      }
 `
 
-export { SText, SCardinfo, SFigure, SBoxInfo } 
+export { Text, Cardinfo, Figure, BoxInfo } 
