@@ -19,6 +19,7 @@ const SList = styled.ul`
      gap: 25px;
 
      overflow-y: auto;
+     overflow-x: hidden;
 
 `
 

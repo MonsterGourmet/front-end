@@ -2,6 +2,8 @@
 
 import * as S from "./styled"
 
+import * as useStore from '@/hooks/useStore'
+
 import { Text } from "../Info/styled";
 
 import { Inter } from "next/font/google"
@@ -17,11 +19,14 @@ import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
 const inter = Inter({ subsets: ['latin'] })
 
 export function Categories() {
-      const { useModalStore } = useContext(ScreenHomeContext)
+      // const { useModalStore } = useContext(ScreenHomeContext)
 
-      const sttsModal = useModalStore((state:any) => state.alteredSttsModal)
+      const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
+      const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
 
-      const alterInfoModal = useModalStore((state:any) => state.alteredInfoModal)
+      // const sttsModal = useModalStore((state:any) => state.alteredSttsModal)
+
+      // const alterInfoModal = useModalStore((state:any) => state.alteredInfoModal)
 
       const handleClick = (info: any) => {
          sttsModal(true); 
