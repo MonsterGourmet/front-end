@@ -6,6 +6,7 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-Burguer.png",
           products: [
                {
+                    id: 1,
                     name: 'Monster SA',
                     bread: 'Pão de hamburguer.',
                     carnes: '1x Carne - Artesanal',
@@ -13,16 +14,19 @@ export const loadDataOnCategory = [
                     price: 12.00
                },
                {
+                    id: 2,
                     name: 'Tauros',
                     carnes: '2x',
                     price: 12.00
                },
                {
+                    id: 3,
                     name: 'Feroz',
                     carnes: '2x',
                     price: 15.00
                },
                {
+                    id: 4,
                     name: 'Duplo Monster',
                     carnes: '2x',
                     price: 22.90
@@ -65,7 +69,7 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-Burguer.png",
           products: [
                {
-                    name: 'Milk Shack de Morango',
+                    name: 'Milk Shake de Morango',
                     price: 12.00
                }
           ]
