@@ -3,9 +3,7 @@ import { BsFillCartCheckFill } from 'react-icons/bs'
 
 import * as S from "./styled"
 import * as I from "./types"
-
-import { ScreenHomeContext } from '@/providers/ScreenHome.Context'
-import { useContext } from 'react'
+import * as useStore from '@/hooks/useStore'
 
 export function Button() {
     return (
@@ -27,10 +25,8 @@ export function ButtonContact({text}:I.ButtonContact) {
     )
 }
 export function ButtonCloseModal({ConfigCss}:any) {
-    const { useModalStore } = useContext(ScreenHomeContext)
-
-    const sttsModal = useModalStore((state:any) => state.alteredSttsModal)
-    const alterInfoModal = useModalStore((state:any) => state.alteredInfoModal)
+    const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
+    const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
 
     const handleClick = () => {
         sttsModal(false)
@@ -42,6 +38,7 @@ export function ButtonCloseModal({ConfigCss}:any) {
 
         alterInfoModal(infoModal);
     }
+
     return (
         <S.ButtonClose className={ConfigCss} onClick={handleClick}>
             <AiFillCloseCircle className="iconClose"/>

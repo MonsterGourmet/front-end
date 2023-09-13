@@ -1,7 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
-
 import { StoreApi, UseBoundStore } from "zustand";
-import { Actions, State } from "./interface";
+import { Actions, Product, State } from "./interface";
 
 // type State = {
 //      sttsModal: boolean
@@ -15,6 +13,24 @@ import { Actions, State } from "./interface";
 //      alteredSttsModal: (stts: boolean) => any,   
 //      alteredInfoModal: (info: any) => any,
 // }
-export interface IModalContext{
-     useModalStore: UseBoundStore<StoreApi<State & Actions>>
+
+export interface HomeContext{
+     // useModalStore: UseBoundStore<StoreApi<State & Actions>>,
+
+     // useMenuStore: UseBoundStore<StoreApi<{
+     //      setOptionMenu: (optn: string) => any;
+     //      optionBar: string;
+     // }>>,
+
+     // useCartStore: UseBoundStore<StoreApi<{
+     //      addCart: (item: Product) => any;
+     //      remCart: (item: Product) => void;
+     //      setSttsCart: (stts: boolean) => any;
+     //      setAddCountCart: (qtdd: number) => any;
+     //      setRemCountCart: (qtdd: number) => any;
+     //      cart: Product[];
+     //      sttsCart: string;
+     //      countCart: number;
+     // }>>,
+     
 }

@@ -39,7 +39,9 @@ export function IconCart({Number, Status}: I.Type): JSX.Element {
      const Open = (Number: number, Status: 'Open' | 'Close'): JSX.Element => (
           <S.IconCart status={Status}>
                <BsCart></BsCart>
-               <S.Ball>{Number}</S.Ball>
+               {
+                    Number > 0 ? <S.Ball>{Number}</S.Ball> : null
+               }
           </S.IconCart>
      )
 

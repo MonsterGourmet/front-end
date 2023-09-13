@@ -1,7 +1,7 @@
 'use client'
 import { styled } from "styled-components";
 
-const SWrapper = styled.section`
+const Wrapper = styled.section`
      height: 100vh;
      width: 100vw;
 
@@ -18,20 +18,19 @@ const SWrapper = styled.section`
      display: flex;
 
 `
-const SText = styled.p`
+const Text = styled.p`
      color: var(--color-White);
 
      span{
           color: var(--color-Brand1);
           
-          font-size: 32px;
+          font-size: 22.5px;
           font-weight: 700;
           line-height: 39px;
-          text-align: left;
           font-weight: 700;
      }
 `
-const SModal = styled.aside`
+const Modal = styled.aside`
      height: 500px;
      width: min(325px,90%);
 
@@ -66,7 +65,7 @@ const SModal = styled.aside`
      }}
 `
 
-const SContainerModal = styled.div`
+const ContainerModal = styled.div`
      height: 100%;
      width: 100%;
 
@@ -94,4 +93,4 @@ const SContainerModal = styled.div`
 
 `
 
-export { SWrapper, SText, SModal, SContainerModal } 
+export { Wrapper, Text, Modal, ContainerModal } 

@@ -2,12 +2,12 @@
 
 import { styled } from "styled-components";
 
-
 interface CardProps {
      readonly $isCard: boolean;
+     readonly $Delay?: any;
 }
 
-const SText = styled.p<CardProps>`
+const Text = styled.p<CardProps>`
      font-size: 12;
      font-weight: 300;
 
@@ -25,7 +25,7 @@ const SText = styled.p<CardProps>`
           line-height: 24px;
      }    
 `
-const SType = styled.div<CardProps>`
+const Type = styled.div<CardProps>`
      height: 31px;
      width: 141px;
 
@@ -44,7 +44,7 @@ const SType = styled.div<CardProps>`
 
      animation:slide-in-right 300ms cubic-bezier(.25,.46,.45,.94) both;  
 
-     ${SText}{
+     ${Text}{
           font-size: 12;
           font-weight: 300;
 
@@ -53,7 +53,7 @@ const SType = styled.div<CardProps>`
 
      @keyframes slide-in-right{0%{transform:translateX(10px);opacity:0}100%{transform:translateX(0);opacity:1}}
 `
-const SInfos = styled.div`
+const Infos = styled.div`
      height: 93px;
      width: 157px;
 
@@ -68,7 +68,7 @@ const SInfos = styled.div`
      display: flex;
      gap: 5px;   
 `
-const SCardDefault = styled.li<CardProps>`
+const CardDefault = styled.li<CardProps>`
      min-height: 160px;
      width: 100%;
      
@@ -84,11 +84,21 @@ const SCardDefault = styled.li<CardProps>`
 
      position: relative;
 
+     animation:  ${(props) => (props.$Delay)};
    
-
-      
+     @keyframes swing-in-left-fwd{
+          0%{
+               transform:translateX(-500px) 
+               rotateY(30deg) scale(0);
+               transform-origin:-100% 50%;
+               opacity:0
+          }100%{
+               transform:translateX(0) rotateY(0) scale(1);
+               transform-origin:1800px 50%;opacity:1
+          }
+     }
 `
-const SContainerCard = styled.div<CardProps>`
+const ContainerCard = styled.div<CardProps>`
      min-height: 150px;
      width: 100%;
 
@@ -106,7 +116,7 @@ const SContainerCard = styled.div<CardProps>`
           width: 102px;
           height: 93px;
           
-          border-radius: ${(props) => (props.$isCard ? '10px' : '100%')};;
+          border-radius: ${(props) => (props.$isCard ? '10px' : '100%')};
           border: 2px solid transparent;
 
           background-color: ${(props) => (props.$isCard ? ' var(--color-Brand1-75) ' : 'var(--color-White)')};
@@ -117,4 +127,4 @@ const SContainerCard = styled.div<CardProps>`
      }   
 `
 
-export { SContainerCard, SCardDefault, SInfos, SText, SType }
+export { ContainerCard, CardDefault, Infos, Text, Type }

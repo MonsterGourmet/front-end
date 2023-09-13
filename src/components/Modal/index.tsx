@@ -1,4 +1,7 @@
 'use client'
+import * as S from './styled'
+
+import * as useStore from '@/hooks/useStore'
 
 import { Inter } from "next/font/google"
 
@@ -10,31 +13,27 @@ import { ScreenHomeContext } from "@/providers/ScreenHome.Context"
 
 import { loadDataOnCategory } from "../../../database/server"
 
-import { SContainerModal, SModal, SText, SWrapper } from "./styled"
 import { ButtonCloseModal } from "../Button"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export function ModalVisibilityControl() {
-     const { useModalStore } = useContext(ScreenHomeContext)
-
-     const info = useModalStore((state:any) => state.infoModal)
-
-     const toggleModal = useModalStore((state:any) => state.sttsModal)
+     const info = useStore.Modal((state:any) => state.infoModal)
+     const toggleModal = useStore.Modal((state:any) => state.sttsModal)
 
      return toggleModal ? Modal(info) : null 
 }
 
 function Modal(infos: any) {
      return (
-               <SWrapper>
-                    <SModal>
+               <S.Wrapper>
+                    <S.Modal>
                          <ButtonCloseModal ConfigCss={'bttnClose'}  />
-                         <SContainerModal>
+                         <S.ContainerModal>
                               <ContentModal info={infos} />
-                         </SContainerModal>
-                    </SModal>
-               </SWrapper>
+                         </S.ContainerModal>
+                    </S.Modal>
+               </S.Wrapper>
      )
 }
 
@@ -59,7 +58,7 @@ function ContentModal({info}: any) {
 
           return (
                <>
-                    <SText as={'h1'} className={inter.className}><span>{type}</span></SText>
+                    <S.Text as={'h1'} className={inter.className}><span>{type}</span></S.Text>
                     <ul className="List">
                          {
                               currentList.map( product => <InfoCard key={product.name} Product={product}/>)
@@ -95,5 +94,4 @@ function ContentModal({info}: any) {
           default:
                return Default()
      }
-
 }
