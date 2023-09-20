@@ -17,7 +17,6 @@ export function Information() {
                     <S.Text>Funcionando <span>das 17:00 ás 23:00</span>.</S.Text>
                     <S.Text>De <span>quarta á domingo</span> </S.Text>
                     <S.Contact> 
-                         {/* Grid p/ dividir */}
                          <IconTell />
                          <ButtonContact text='7199909688' />
                     </S.Contact>

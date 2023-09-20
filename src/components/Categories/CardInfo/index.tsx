@@ -14,9 +14,9 @@ export function InfoCard({Product}:any) {
                </S.Figure>
                <S.BoxInfo className={Opens.className}>
                     <S.Text className={inter.className} as='h1'>{Product.name}</S.Text>
-                    { Product.carnes ? <S.Text className="description">{Product.carnes}<hr></hr></S.Text> : null }
-                    { Product.salad ? <S.Text className="description">Salada - {Product.salad}<hr></hr></S.Text> : null }
-                    { Product.bread ? <S.Text className="description">{Product.bread}<hr></hr></S.Text> : null }                    
+                    { Product.carnes && <S.Text className="description">{Product.carnes}<hr></hr></S.Text>  }
+                    { Product.salad && <S.Text className="description">Salada - {Product.salad}<hr></hr></S.Text>  }
+                    { Product.bread && <S.Text className="description">{Product.bread}<hr></hr></S.Text>  }                    
                </S.BoxInfo>
           </S.Cardinfo>
      )    

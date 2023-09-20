@@ -19,14 +19,8 @@ import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
 const inter = Inter({ subsets: ['latin'] })
 
 export function Categories() {
-      // const { useModalStore } = useContext(ScreenHomeContext)
-
       const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
       const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
-
-      // const sttsModal = useModalStore((state:any) => state.alteredSttsModal)
-
-      // const alterInfoModal = useModalStore((state:any) => state.alteredInfoModal)
 
       const handleClick = (info: any) => {
          sttsModal(true); 

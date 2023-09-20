@@ -1,4 +1,5 @@
 'use client'
+
 import { styled } from "styled-components";
 
 const Wrapper = styled.section`
@@ -16,7 +17,6 @@ const Wrapper = styled.section`
      flex-direction: column;
      align-items: center;
      display: flex;
-
 `
 const Text = styled.p`
      color: var(--color-White);
@@ -64,7 +64,6 @@ const Modal = styled.aside`
           opacity: 1;
      }}
 `
-
 const ContainerModal = styled.div`
      height: 100%;
      width: 100%;
@@ -92,5 +91,28 @@ const ContainerModal = styled.div`
      }
 
 `
+const BoxPayment = styled.div`
+     height: 100%;
+     width: 100%;
 
-export { Wrapper, Text, Modal, ContainerModal } 
+     padding: 10px;
+
+     position: relative;
+
+     flex-direction: column;
+     align-items: flex-end;
+     display: flex;
+
+     ${Text} {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 29px;
+
+          color: var(--color-Brand1);
+
+          position: absolute;
+          top: 10px;
+     }
+`
+
+export { Wrapper, Text, Modal, ContainerModal, BoxPayment } 

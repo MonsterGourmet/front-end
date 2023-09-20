@@ -13,7 +13,8 @@ import { ScreenHomeContext } from "@/providers/ScreenHome.Context"
 
 import { loadDataOnCategory } from "../../../database/server"
 
-import { ButtonCloseModal } from "../Button"
+import { ButtonCloseModal, PaymentButtons } from "../Button"
+import { FormAddress } from '../Form'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -70,17 +71,18 @@ function ContentModal({info}: any) {
 
      const Payment = () => {
           return (
-               <ul className="List">
-                         <h1>Payment</h1>
-               </ul>
+               <S.BoxPayment>
+                    <S.Text>Pagamento</S.Text>
+                    <PaymentButtons />
+               </S.BoxPayment>
           )
      }
 
      const Address = () => {
           return (
-               <ul className="List">
-                         <h1>Address</h1>
-               </ul>
+            <S.BoxPayment>
+               <FormAddress />
+            </S.BoxPayment>
           )
      }
 
