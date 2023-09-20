@@ -1,13 +1,8 @@
 'use client'
 import * as S from "./styled";
-
 import * as useStore from '@/hooks/useStore'
 
 import { Card } from "./Card";
-
-import { useContext } from "react";
-
-import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
 
 import { loadDataOnCategory } from "../../../../database/server";
 

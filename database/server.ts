@@ -11,25 +11,30 @@ export const loadDataOnCategory = [
                     bread: 'Pão de hamburguer.',
                     carnes: '1x Carne - Artesanal',
                     salad: 'Alface, Tomate, Milho, Ervilha.',
-                    price: 12.00
+                    price: 12.00,
+                    qtdd: 0,
                },
                {
                     id: 2,
                     name: 'Tauros',
                     carnes: '2x',
-                    price: 12.00
+                    price: 12.00,
+                    qtdd: 0,
                },
                {
                     id: 3,
                     name: 'Feroz',
                     carnes: '2x',
-                    price: 15.00
+                    price: 15.00,
+                    qtdd: 0,
+
                },
                {
                     id: 4,
                     name: 'Duplo Monster',
                     carnes: '2x',
-                    price: 22.90
+                    price: 22.90,
+                    qtdd: 0,
                },
           ]
      },

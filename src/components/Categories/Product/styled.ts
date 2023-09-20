@@ -31,6 +31,7 @@ const Product = styled.li`
      background-color: var(--color-Brand1-75);
 
      transition: 200ms linear;
+     scroll-snap-align: center;
 
      flex-direction: column;
      align-items: center;

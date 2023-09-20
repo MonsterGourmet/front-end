@@ -1,6 +1,7 @@
 'use client'
 
 import { styled } from "styled-components";
+import { Product } from "./Product/styled";
 
 const Categorie = styled.section`
      height: 380px;
@@ -33,12 +34,18 @@ const ListProductsHorizontal = styled.ul`
 
      padding: 0 5px;
 
-     overflow-x: auto;
+     overflow-x: scroll;
+     scroll-snap-type: 'x mandatory';
      
      flex-direction: row;
      align-items: center;
      display: flex;
      gap: 10px;
+     
+     &:hover > ${Product}:not(:hover) {
+          filter: blur(10px);
+          transform: scale(0.9, 0.9);
+     }
 `
 
 

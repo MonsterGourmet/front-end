@@ -1,13 +1,14 @@
 import { AiOutlinePlus, AiFillCloseCircle } from 'react-icons/ai'
-import { BsFillCartCheckFill } from 'react-icons/bs'
+
+import { BsFillCartCheckFill, BsTrash3 } from 'react-icons/bs'
 
 import * as S from "./styled"
 import * as I from "./types"
 import * as useStore from '@/hooks/useStore'
 
-export function Button() {
+export function Button({onClick, text}: any) {
     return (
-          <S.Button>Olá</S.Button>
+          <S.Button onClick={onClick}>{text}</S.Button>
     )
 }
 export function ButtonAdd({ConfigCss, onClick, Status}: any) {
@@ -22,6 +23,13 @@ export function ButtonAdd({ConfigCss, onClick, Status}: any) {
 export function ButtonContact({text}:I.ButtonContact) {
     return (
         <S.ButtonTell>{text}</S.ButtonTell>
+    )
+}
+export function ButtonCounter({Symbols, onClick}:any){
+    return (
+        <S.BttnCount onClick={onClick} type={Symbols}>
+            {Symbols}
+        </S.BttnCount>
     )
 }
 export function ButtonCloseModal({ConfigCss}:any) {
@@ -45,6 +53,26 @@ export function ButtonCloseModal({ConfigCss}:any) {
         </S.ButtonClose>
     )
 }
+export function ButtonRemoveCart({ConfigCss, onClick}:any) {
+    return (
+        <S.ButtonRemove className={ConfigCss} onClick={onClick}>
+            <BsTrash3 className="iconTrash"/>
+        </S.ButtonRemove>
+    )
+}
+export function CheckoutButtons({text, onClick}: any) {
+    return ( 
+        <S.ButtonPayment onClick={onClick}>
+            <S.Text>{text}</S.Text>
+        </S.ButtonPayment>
+    )
+}
+export function PaymentButtons() {
+    return (
+        <S.OptionsPaymentBttn ></S.OptionsPaymentBttn>
+    )
+}
+
 
 //TODOS: Passar esse icones para pasta.
 

@@ -9,11 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
     box-sizing: border-box;
 
-    /* font-family: 'Inter', sans-serif; */
-
     list-style-type: none;
   }
-
 
   button {
 	cursor: pointer;
@@ -41,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
 		--color-Brand1: #F77A20;
 		--color-Brand1-75: #F77A20BF;
+		--color-Brand1-80: #AA4B06;
 		--color-Brand2: #5126ea;
 		--color-Brand3: #b0a6f0;
 		--color-Brand4: #edeafd;

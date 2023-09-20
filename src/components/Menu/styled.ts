@@ -1,7 +1,7 @@
 'use client'
 import { styled } from "styled-components";
 
-const ContainerMenu = styled.section`
+const ContainerMenu = styled.main`
      height: 700px;
      width: 100%;
 
