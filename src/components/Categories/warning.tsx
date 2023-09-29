@@ -1,6 +1,6 @@
 'use client'
 
-import * as S from "./styled"
+import * as S from "./warning.styled"
 
 import * as useStore from '@/hooks/useStore'
 
@@ -15,10 +15,11 @@ import { useContext } from "react";
 import { loadDataOnCategory } from "../../../database/server";
 
 import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
+import { AwaitProduct } from "./Product/warning";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export function Categories() {
+export function AwaitCategories() {
       const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
       const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
 
@@ -46,11 +47,12 @@ export function Categories() {
       return (
         <S.Categorie className={inter.className}>
             <S.ContainerCategorie>
-                  <S.Text as={'h1'}><span>Categorias</span></S.Text>
+                  <S.Text as={'h1'}></S.Text>
                   <S.ListProductsHorizontal>
                      {
                         filteredList.map( (item:any) => (
-                           <Product onClick={()=>handleClick(item)} key={item.category} product={item} />
+                           // eslint-disable-next-line react/jsx-key
+                           <AwaitProduct />
                         ))
                      }
                   </S.ListProductsHorizontal>

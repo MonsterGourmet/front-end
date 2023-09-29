@@ -206,12 +206,32 @@ const ButtonPayment = styled.button`
 `
 const OptionsPaymentBttn = styled.button`
   height: 60px;
-  width: 169px;
+  min-width: 115px;
 
-  border-radius: 10px;
-  border: 1px solid var(--color-Brand1);
+  background-color: var(--color-Brand1);
+  color: var(--color-White);
 
+
+  outline: 3px var(--color-Brand1-75) solid;
+  outline-offset: -3px;
+
+  border-radius: 20px;
+  border: none;
+  
+  transition: 400ms;
+
+  font-weight: 400;
+  font-size: 1em;
+
+  transition: 400ms;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-Brand1);
+  }
 `
+
+
 export { 
   Text, Button, ButtonTell, BttnCount, ButtonAdd, 
   ButtonPayment, ButtonClose, ButtonOption, ButtonRemove,

@@ -5,16 +5,16 @@ import * as useStore from '@/hooks/useStore'
 
 import { Inter } from "next/font/google"
 
+import { useState } from 'react'
+
 import { InfoCard } from "../Categories/CardInfo"
 
-import { useContext } from "react"
-
-import { ScreenHomeContext } from "@/providers/ScreenHome.Context"
+import { FormAddress } from '../Form'
 
 import { loadDataOnCategory } from "../../../database/server"
 
-import { ButtonCloseModal, PaymentButtons } from "../Button"
-import { FormAddress } from '../Form'
+import { Button, ButtonCloseModal, PaymentButtons } from "../Button"
+import { Input } from '../Form/Input'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,6 +40,33 @@ function Modal(infos: any) {
 
 function ContentModal({info}: any) {
      const { type, Model } = info     
+
+     const [ payment, setPayment ] = useState('')
+     
+     const setChange = useStore.Cart(state => state.setterChange)
+
+
+     const MethodsPayment = (type: string) => {
+          switch (type) {
+               case 'Dinheiro':
+                    return (
+                    <Input label="Tem troco ?" placeholder="Ex: 50,00" 
+                    type="number"  min="0.00" max="10000.00" 
+                    step="0.01" onChange={(e)=>{setChange(e.target.value)}}/> 
+                    )
+               case 'Cartão':
+                    return(
+                         <dl>
+                              <dt>Crédito ou Débito</dt>
+                              <dd>Aceitamos cartão de crédito ou débito, o pagamento é efetuado no ato da entrega.</dd>
+                         </dl>
+                    )
+               case 'Pix':
+                    return <h2>Chave Pix: XXXXXXXXX</h2>
+               default:
+                    return <h1 className='Choice'>Escolha seu método de pagamento</h1>
+          }
+     }
 
      const Default = () => {
           return (
@@ -69,20 +96,30 @@ function ContentModal({info}: any) {
           )
      }
 
-     const Payment = () => {
+     const Payment = (): JSX.Element => {
+
+          const getPay = useStore.Cart(state => state.payment)
+          const setPay = useStore.Cart(state => state.setterPayment)
+
           return (
                <S.BoxPayment>
-                    <S.Text>Pagamento</S.Text>
-                    <PaymentButtons />
+               <S.Text>Pagamento</S.Text>
+                    <PaymentButtons text='Dinheiro' onClick={()=>{setPay('Dinheiro')}}/>
+                    <PaymentButtons text='Cartão' onClick={()=>{setPay('Cartão')}}/>
+                    <PaymentButtons text='Pix'  onClick={()=>{setPay('Pix')}} /> 
+                    <S.BoxComplement>
+                         { MethodsPayment(getPay) }
+                    </S.BoxComplement>
+                    <Button configCss='configBttn' text='Confirmar' />
                </S.BoxPayment>
           )
      }
 
      const Address = () => {
           return (
-            <S.BoxPayment>
+            <S.BoxAddress>
                <FormAddress />
-            </S.BoxPayment>
+            </S.BoxAddress>
           )
      }
 

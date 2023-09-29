@@ -19,7 +19,6 @@ export function Cart() {
                     <S.Text>Seu carrinho</S.Text>
                     <S.ListCard>
                          {
-                              // A linha 16 até linha 19 dentro do component ListCard
                               itemsCart.map((item: any) => <CartCard key={item.name} Product={item} />)
                          }
                     </S.ListCard>

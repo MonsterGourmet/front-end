@@ -92,7 +92,41 @@ const ContainerModal = styled.div`
 
 `
 const BoxPayment = styled.div`
-     height: 100%;
+    height: 80%;
+    width: 100%;
+
+    margin-top: 35px;
+    padding: 10px;
+
+    border: 1px solid red;
+
+    position: relative;
+
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+     ${Text} {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 29px;
+
+          color: var(--color-Brand1);
+
+          position: absolute;
+          top: -55px; left: 10px;
+     }
+
+     .configBttn{
+          margin: 70px auto 0px auto;
+     }
+`
+const BoxAddress = styled.div`
+        height: 100%;
      width: 100%;
 
      padding: 10px;
@@ -114,5 +148,53 @@ const BoxPayment = styled.div`
           top: 10px;
      }
 `
+const BoxComplement = styled.div`
+     height: 100px;
+     width: 100%;
 
-export { Wrapper, Text, Modal, ContainerModal, BoxPayment } 
+     margin-top: 10px;
+
+     h2{
+          font-size: 1.5rem;
+          font-weight: 300;
+          line-height: 29px;
+
+          color: var(--color-Brand1);
+
+          position: absolute;
+
+          animation:text-focus-in 800ms cubic-bezier(.55,.085,.68,.53)
+     }
+
+     .Choice{
+          color: var(--color-Brand1-80);
+
+          animation:text-focus-in 800ms cubic-bezier(.55,.085,.68,.53)
+     }
+
+     dt{
+          font-size: 1.4rem;
+          font-weight: 300;
+          line-height: 29px;
+
+          animation:text-focus-in 800ms cubic-bezier(.55,.085,.68,.53);
+
+          color: var(--color-Brand1-80);
+     }
+
+     dd{
+          padding-left: 5px;
+
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 29px;
+
+          color: var(--color-Brand1-80);
+
+          animation:text-focus-in 800ms cubic-bezier(.55,.085,.68,.53)
+     }
+
+     @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+`
+
+export { Wrapper, Text, Modal, ContainerModal, BoxPayment, BoxAddress, BoxComplement } 

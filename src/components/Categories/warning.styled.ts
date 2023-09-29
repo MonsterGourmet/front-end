@@ -8,11 +8,26 @@ const Categorie = styled.section`
      width: 100%;
 `
 const Text = styled.p`
+     height: 50px;
+     width: 100px;
+
+     display: block;
+
+     border-radius: 20px;
+     border: 1px solid transparent;
+
      span{
           color: var(--color-Brand1);
 
           font-weight: 700;
      }
+     
+     background-image: linear-gradient( 90deg, #ccc 0px, rgb(229 229 229 / 90%) 40px, #ccc 80px);
+
+     background-position: 100% 0 ;
+     background-size: 300%;
+
+     animation: shimmer 1s infinite;
 `
 const ContainerCategorie = styled.div`
      height: 100%;
