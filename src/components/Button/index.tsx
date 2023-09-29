@@ -6,9 +6,9 @@ import * as S from "./styled"
 import * as I from "./types"
 import * as useStore from '@/hooks/useStore'
 
-export function Button({onClick, text}: any) {
+export function Button({configCss, onClick, text}: any) {
     return (
-          <S.Button onClick={onClick}>{text}</S.Button>
+          <S.Button className={configCss} onClick={onClick}>{text}</S.Button>
     )
 }
 export function ButtonAdd({ConfigCss, onClick, Status}: any) {
@@ -67,9 +67,11 @@ export function CheckoutButtons({text, onClick}: any) {
         </S.ButtonPayment>
     )
 }
-export function PaymentButtons() {
+export function PaymentButtons({text, onClick}: any) {
     return (
-        <S.OptionsPaymentBttn ></S.OptionsPaymentBttn>
+        <S.OptionsPaymentBttn onClick={onClick}>
+            {text}
+        </S.OptionsPaymentBttn>
     )
 }
 

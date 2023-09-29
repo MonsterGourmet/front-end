@@ -135,7 +135,6 @@ const Payment = styled.div`
           color: var(--color-Grey0);     
      }
 `
-
 const Address = styled.div`
      height: 50px;
      width: 100%;
@@ -155,5 +154,82 @@ const Address = styled.div`
           color: var(--color-Grey0);     
      }
 `
+const SpaceForNotes = styled.div`
+     height: 200px;
+     width: 100%;
 
-export { Text, Checkout, SubTotal, IncrementTotal, Total, Payment, Address }
+     padding: 10px;
+
+     flex-direction: column;
+     align-items: center;
+     display: flex;
+     gap: 2px;
+
+     ${Text}{
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 29px;
+
+          color: var(--color-Grey0) 
+     }
+
+     textarea{
+          height: 80%;
+          width: 100%;
+
+          padding: 10px;
+
+          border-radius: 20px;
+          border: 1px solid var(--color-Brand1);
+
+          color: var(--color-Grey3);
+
+          outline: none;
+          resize: none;
+
+          font-size: 1rem;
+          font-family: "Inter";
+          font-weight: 400;
+          line-height: 24px;
+     }
+`
+const SpaceForButtons = styled.div`
+     height: 40px;
+     width: 100%;     
+
+     justify-content: space-between;
+     flex-direction: row;
+     align-items: center;
+     display: flex;
+     gap: 10px;
+
+     a{
+          height: 90%;
+          width: 100px;
+
+          display: block;
+
+          font-size: 1rem;
+          font-weight: 100;
+          
+          .configBttn{
+               height: 100%;
+               width: 100%;
+
+
+               font-size: 1rem;
+               font-weight: 100;
+          }
+     }
+  
+
+     .configBttn{
+          height: 100%;
+          width: 150px;
+
+          font-size: 1rem;
+          font-weight: 100;
+     }
+    
+`
+export { Text, Checkout, SubTotal, IncrementTotal, Total, Payment, Address, SpaceForButtons, SpaceForNotes }

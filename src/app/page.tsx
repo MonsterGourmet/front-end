@@ -1,4 +1,8 @@
 import { Categories, Footer, Header, Information, Menu } from "@/components"
+import { AwaitCategories } from "@/components/Categories/warning"
+import { AwaitHeader } from "@/components/Header/waiting"
+import { AwaitInformation } from "@/components/Info/waiting"
+import { AwaitMenu } from "@/components/Menu/waiting"
 import { ModalVisibilityControl } from "@/components/Modal"
 
 import HomeProvider from "@/providers/ScreenHome.Context"
