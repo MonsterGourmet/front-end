@@ -7,32 +7,6 @@ interface CardProps {
      readonly $Delay?: any;
 }
 
-// const Text = styled.p<CardProps>`
-//      /* font-family: 'Inter', sans-serif;
-//      font-size: 24px;
-//      font-weight: 300; */
-//      /* line-height: 24px; */
-//      font-family: 'Inter', sans-serif;
-//      border: 1px solid transparent;
-//      display: block;
-//      width: 110px;
-
-
-//      color: var(--color-Grey0);
-
-//      h2{
-//           font-size: 24px;
-//           font-weight: 300;
-//      }
-
-//      span{
-//           color: ${(props) => (props.$isCard ? 'var(--color-Brand1)' : 'var(--color-White)')};
-//           font-family: 'Open Sans', sans-serif;
-//           font-size: 18px;
-//           font-weight: 300;
-//           line-height: 25px;
-//      }    
-// `
 const Text = styled.p<CardProps>`
      font-size: 1.5rem;
      font-weight: 300;
@@ -44,13 +18,13 @@ const Text = styled.p<CardProps>`
      }
     
      span{
-          color: ${(props) => (props.$isCard ? 'var(--color-Brand1)' : 'var(--color-White)')};
+          color: var(--color-Brand1);
 
           font-size: 1.12rem;
           font-weight: 500;
      }    
 `
-const Type = styled.div<CardProps>`
+const Type = styled.div`
      height: 22px;
      width: 120px;
 
@@ -60,7 +34,7 @@ const Type = styled.div<CardProps>`
      position: absolute;
      right: -2px; bottom: 0px;
 
-     background-color: ${(props) => (props.$isCard ? 'var(--color-Brand1-75)' : 'var(--color-White)')};
+     background-color: var(--color-Brand1-75);
 
      justify-content: center;
      flex-direction: column;
@@ -74,7 +48,7 @@ const Type = styled.div<CardProps>`
           font-weight: 500;
           line-height: 22px;
 
-          color: ${(props) => (props.$isCard ? 'var(--color-White)' : 'var(--color-Brand1)')};
+          color: var(--color-Brand1);
      }
 
      @keyframes slide-in-right{0%{transform:translateX(10px);opacity:0}100%{transform:translateX(0);opacity:1}}
@@ -96,39 +70,26 @@ const Infos = styled.div`
      display: flex;
      gap: 5px;   
 `
-const CardDefault = styled.li<CardProps>`
+const CardDefault = styled.li`
      min-height: 145px;
      width: 100%;
      
      transition: 200ms ease-in;
      
      border-radius: 20px;
-     border: ${(props) => (props.$isCard ? '2px solid var(--color-Brand1)' : '2px solid var(--color-White)')};
+     border: 1px solid var(--color-Brand1);
 
-     background-color: ${(props) => (props.$isCard ? 'var(--color-White)' : 'var(--color-Brand1)')};
-     box-shadow: ${(props) => (props.$isCard ? '0px 0px 7px 1px  #ce5e0da3' : '0px 5px 5px 0px var(--color-DropShow)')};
+     background-color: var(--color-White);
+     box-shadow: 0px 5px 5px 0px var(--color-DropShow);
 
      padding: 5px;
+
      flex-direction: column;
      justify-content: center;
      align-items: center;
      display: flex;
-
-     animation:  ${(props) => (props.$Delay)};
-   
-     @keyframes swing-in-left-fwd{
-          0%{
-               transform:translateX(-500px) 
-               rotateY(30deg) scale(0);
-               transform-origin:-100% 50%;
-               opacity:0
-          }100%{
-               transform:translateX(0) rotateY(0) scale(1);
-               transform-origin:1800px 50%;opacity:1
-          }
-     }
 `
-const ContainerCard = styled.div<CardProps>`
+const ContainerCard = styled.div`
      height: 130px;
      width: 100%;
 
@@ -146,10 +107,10 @@ const ContainerCard = styled.div<CardProps>`
           width: 102px;
           height: 93px;
           
-          border-radius: ${(props) => (props.$isCard ? '10px' : '100%')};
+          border-radius: 10px;
           border: 2px solid transparent;
 
-          background-color: ${(props) => (props.$isCard ? ' var(--color-Brand1-75) ' : 'var(--color-White)')};
+          background-color: var(--color-Brand1-75);
      } 
      .configBttnCls{
           position: absolute;

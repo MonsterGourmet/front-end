@@ -6,21 +6,20 @@ import * as useStore from '@/hooks/useStore'
 import Image from 'next/image'
 import Photo from "../../../../public/Photo-Burguer.png"
 
+import { IProductCart } from '@/types'
+
 import { ButtonCounter, ButtonRemoveCart } from '@/components/Button'
-import { useState } from 'react'
 
+export function CartCard({Product}: IProductCart) {
+     const remCart = useStore.Cart(state => state.remCart)
+     const moreItem = useStore.Cart(state => state.moreItem)
+     const lessItem = useStore.Cart(state => state.lessItem)
 
-export function CartCard({Product, N}: any) {
-     const [ cart, setCart] = useState(true)        
-
-     const remCart = useStore.Cart((state:any) => state.remCart)
-     const moreItem = useStore.Cart((state:any) => state.moreItem)
-     const lessItem = useStore.Cart((state:any) => state.lessItem)
-
-     const setStorage = ( key: any, value: any ) => {
+     const setStorage = ( key: number, value: boolean ) => {
           const data = JSON.stringify(value)
+          const Key  = key.toString()
           
-          return window.localStorage.setItem(key, data)
+          return window.localStorage.setItem(Key, data)
      }
 
      const handleClick = () => {
@@ -30,12 +29,12 @@ export function CartCard({Product, N}: any) {
      }
 
      return (
-          <S.CardDefault $Delay={`swing-in-left-fwd 1.${N}s both linear`} $isCard={cart}>
-               <S.ContainerCard $isCard={cart}>
+          <S.CardDefault >
+               <S.ContainerCard>
                     <Image className={"Photo"} src={Photo} alt="Foto do lanche" />
                     <S.Infos>
-                         <S.Text  $isCard={cart}>{Product.name}</S.Text>
-                         <S.Text as='h4' $isCard={cart}>
+                         <S.Text>{Product.name}</S.Text>
+                         <S.Text as='h4'>
                               <span>
                                    {Product.price.toLocaleString('pt-br',{
                                         style: 'currency',
@@ -43,23 +42,23 @@ export function CartCard({Product, N}: any) {
                                    })}    
                               </span>
                          </S.Text>
-                         {/* <S.Type $isCard={cart}>
-                              <S.Text  $isCard={cart}>Artesanal</S.Text>
-                         </S.Type> */}
                     </S.Infos>
                     <S.BoxCount>
                          <S.Text className='Quantity'>{Product.qtdd}x</S.Text>
-                         <S.Text className='Value'>{Product.value.toLocaleString('pt-br',{
+                         <S.Text className='Value'>
+                              {
+                                   Product.value.toLocaleString('pt-br',
+                                   {
                                         style: 'currency',
                                         currency: 'BRL'
-                                   })}
+                                   })
+                              }
                          </S.Text>
                     </S.BoxCount>
                     <S.BoxButtons>
-                         <ButtonCounter onClick={()=>moreItem(Product)} Symbols='+'/>
+                         <ButtonCounter onClick={()=>moreItem(Product)} symbols='+'/>
                         {
-                          Product.qtdd === 1 ? <ButtonRemoveCart onClick={handleClick} ConfigCss={""}/> :   <ButtonCounter onClick={()=>lessItem(Product)} Symbols='-'/>
-
+                          Product.qtdd === 1 ? <ButtonRemoveCart onClick={handleClick} configCss={""}/> :   <ButtonCounter onClick={()=>lessItem(Product)} symbols='-'/>
                         }
                     </S.BoxButtons>
                </S.ContainerCard>

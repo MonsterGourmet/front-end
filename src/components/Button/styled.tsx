@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { ButtonProps } from './types';
 
 interface BttnCount {
-  type: "+" | "-";
+  type?: "+" | "-";
 }
 
 
@@ -34,7 +34,6 @@ const Button = styled.button`
 
   background-color: var(--color-Brand1);
   color: var(--color-White);
-
   
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
@@ -64,7 +63,7 @@ const ButtonAdd = styled.button`
   width: 40px;
 
   border-radius: 100%;
-  border: 1px solid var(--color-Brand1);
+  border: 1px solid transparent;
 
   justify-content: center;
   flex-direction: row;
@@ -83,7 +82,6 @@ const ButtonAdd = styled.button`
 
     font-size: 32px;
   }
-
 `
 const BttnCount = styled.button<BttnCount>`
   height: 100%;
@@ -125,7 +123,6 @@ const ButtonClose = styled.button`
     border-radius: 100%;
     border: 1px solid transparent;
 
-    /* background-color: var(--color-Brand1); */
     color: var(--color-White);
 
     font-size: 31px;
@@ -147,46 +144,43 @@ const ButtonRemove = styled.button`
   display: flex;
 
   .iconTrash{
-    /* border-radius: 100%;
-    border: 1px solid transparent; */
-
     color: var(--color-Alert1);
 
     font-size: 21px;
   }
 `
 const ButtonOption = styled.button<ButtonProps>`
-     height: 40px;
-     min-width: 130px;
+  height: 40px;
+  min-width: 130px;
 
-     transition: 200ms linear;
+  transition: 200ms linear;
 
-     border-radius: 20px;
-     border: 1px solid var(--color-Brand1);
+  border-radius: 20px;
+  border: 1px solid var(--color-Brand1);
 
-     box-shadow: 0px 1px 1px 0px var(--color-DropShow);
+  box-shadow: 0px 1px 1px 0px var(--color-DropShow);
 
-     background-color: ${(props) => (props.$isSelected !== 'all' ? 'var(--color-Brand1)': 'var(--color-White)')};
-     color: var(--color-Brand1);
+  background-color: ${(props) => (props.$isSelected !== 'all' ? 'var(--color-Brand1)': 'var(--color-White)')};
+  color: var(--color-Brand1);
 
-     justify-content: center;
-     align-items: center;
-     display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
-     cursor: pointer;
+  cursor: pointer;
 
-     .Icon{          
-          height: 40px;
-          width: 50px;
+  .Icon{          
+      height: 40px;
+      width: 50px;
 
-          border-radius: 100%;
+      border-radius: 100%;
 
-          color: var(--color-Brand1);
+      color: var(--color-Brand1);
 
-          animation:slide-in-blurred-right 250ms both;
+      animation:slide-in-blurred-right 250ms both;
 
-          overflow: hidden;
-     }
+      overflow: hidden;
+  }
 `
 const ButtonPayment = styled.button`
   height: 99%;
@@ -230,7 +224,6 @@ const OptionsPaymentBttn = styled.button`
     color: var(--color-Brand1);
   }
 `
-
 
 export { 
   Text, Button, ButtonTell, BttnCount, ButtonAdd, 

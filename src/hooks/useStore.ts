@@ -2,24 +2,9 @@ import { create } from "zustand";
 
 import { persist } from "zustand/middleware";
 
-import { Product } from "@/providers/Types/interface";
-
-interface IMdl_StateAction {
-  sttsModal: boolean,
-  infoModal: {
-    type: string,
-    Model: string
-  },
-
-  alteredSttsModal: (stts: boolean) => any,
-  alteredInfoModal: (info: any) => any,
-}
-
-interface IMnu_StateAction {
-  optionBar: string,
-
-  setOptionMenu: (optn: string) => any
-}
+// import { Product } from "@/providers/Types/interface";
+import { IMdl_StateAction, IMnu_StateAction } from "./types";
+import { IDefaultProduct } from "@/types";
 
 const initialState = {
   Cart: {
@@ -45,11 +30,15 @@ const initialState = {
   }
 }
 
+interface info {
+  type: string,
+  Model: string
+}
 const Modal = create<IMdl_StateAction>((set: any) => ({
   ...initialState.Modal,
 
   alteredSttsModal: (stts: boolean) => set({ sttsModal: stts }),
-  alteredInfoModal: (info: any) => set({ infoModal: { type: info.type, Model: info.Model } }),
+  alteredInfoModal: (info: info) => set({ infoModal: { type: info.type, Model: info.Model } }),
 }))
 
 const Menu = create<IMnu_StateAction>((set: any) => ({
@@ -63,16 +52,15 @@ const Cart = create(persist(
     ...initialState.Cart,
 
 
-    addCart: (item: Product) => {
+    addCart: (item: IDefaultProduct) => {
       const addInfoItem = {
-        time: new Date().getHours(),
-        value: item.price,
         ...item,
+        value: item.price,
         qtdd: 1,
       }
       set((state: any) => ({ cart: [addInfoItem, ...state.cart] }))
     },
-    remCart: (item: Product) => {
+    remCart: (item: IDefaultProduct) => {
       const newCart = get().cart.filter((Prdct: any) => Prdct.name !== item.name)
       set(() => ({ cart: [...newCart] }))
     },

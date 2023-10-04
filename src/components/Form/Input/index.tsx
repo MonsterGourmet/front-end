@@ -1,10 +1,11 @@
 'use client'
-import { useState } from "react";
-import { InputProps } from "./types";
 
 import * as S from "./styled";
 
 import * as useStore from "@/hooks/useStore"
+
+import { useState } from "react";
+import { InputProps } from "./types";
 
 export const Input = ({ label, variant, register, ...props }: InputProps) => {
   return (
@@ -18,8 +19,8 @@ export const Input = ({ label, variant, register, ...props }: InputProps) => {
 export const SelectInput = () => {
   const [neighborhood, setneighborhood] = useState('');
 
-  const setterAddress = useStore.Cart((state:any) => state.setterAddress)
-  const getterAddress = useStore.Cart((state:any) => state.address)
+  const setterAddress = useStore.Cart(state => state.setterAddress)
+  const getterAddress = useStore.Cart(state => state.address)
 
   const handleneighborhoodChange = (event: any) => {
     setneighborhood(event.target.value); 

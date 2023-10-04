@@ -5,7 +5,7 @@ import * as useStore from '@/hooks/useStore'
 
 import { Inter } from "next/font/google"
 
-import { useState } from 'react'
+import { Input } from '../Form/Input'
 
 import { InfoCard } from "../Categories/CardInfo"
 
@@ -14,11 +14,10 @@ import { FormAddress } from '../Form'
 import { loadDataOnCategory } from "../../../database/server"
 
 import { Button, ButtonCloseModal, PaymentButtons } from "../Button"
-import { Input } from '../Form/Input'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export function ModalVisibilityControl() {
+export function ModalVisibilityControl(): JSX.Element | null {
      const info = useStore.Modal((state:any) => state.infoModal)
      const toggleModal = useStore.Modal((state:any) => state.sttsModal)
 
@@ -29,7 +28,7 @@ function Modal(infos: any) {
      return (
                <S.Wrapper>
                     <S.Modal>
-                         <ButtonCloseModal ConfigCss={'bttnClose'}  />
+                         <ButtonCloseModal configCss={'bttnClose'}  />
                          <S.ContainerModal>
                               <ContentModal info={infos} />
                          </S.ContainerModal>
@@ -40,13 +39,11 @@ function Modal(infos: any) {
 
 function ContentModal({info}: any) {
      const { type, Model } = info     
-
-     const [ payment, setPayment ] = useState('')
      
      const setChange = useStore.Cart(state => state.setterChange)
 
 
-     const MethodsPayment = (type: string) => {
+     const MethodsPayment = (type: string): JSX.Element => {
           switch (type) {
                case 'Dinheiro':
                     return (
@@ -68,15 +65,15 @@ function ContentModal({info}: any) {
           }
      }
 
-     const Default = () => {
+     const Default = (): JSX.Element => {
           return (
                <ul className="List">
-                         <h1>Default</h1>
+                    <h1>Default</h1>
                </ul>
           )
      }
  
-     const Food = (type:any) => {
+     const Food = (type:any): JSX.Element => {
 
           const productsRepository = loadDataOnCategory
 
