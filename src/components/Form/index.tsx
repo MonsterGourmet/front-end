@@ -10,9 +10,8 @@ import * as useStore from "@/hooks/useStore"
 export function FormAddress() {
      const { register, handleSubmit } = useForm();
 
-     const setterAddress = useStore.Cart((state:any) => state.setterAddress)
+     const setterAddress = useStore.Cart(state => state.setterAddress)
 
-     //Veja se não é melhor o ZOD
      const infoAddress = async (data: any) => {
           setterAddress(data)
      };

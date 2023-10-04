@@ -4,25 +4,20 @@ import * as S from "./styled"
 
 import * as useStore from '@/hooks/useStore'
 
-import { Text } from "../Info/styled";
-
 import { Inter } from "next/font/google"
 
 import { Product } from "./Product";
 
-import { useContext } from "react";
-
 import { loadDataOnCategory } from "../../../database/server";
-
-import { ScreenHomeContext } from "@/providers/ScreenHome.Context";
+import { ICategories } from "@/types";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export function Categories() {
-      const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
-      const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
+      const sttsModal = useStore.Modal(state => state.alteredSttsModal)
+      const alterInfoModal = useStore.Modal(state => state.alteredInfoModal)
 
-      const handleClick = (info: any) => {
+      const handleClick = (info: ICategories) => {
          sttsModal(true); 
 
          const Type = info.category

@@ -1,21 +1,23 @@
-import { AiOutlinePlus, AiFillCloseCircle } from 'react-icons/ai'
-
-import { BsFillCartCheckFill, BsTrash3 } from 'react-icons/bs'
-
 import * as S from "./styled"
 import * as I from "./types"
 import * as useStore from '@/hooks/useStore'
 
-export function Button({configCss, onClick, text}: any) {
+import { IButton } from "@/types"
+
+import { AiOutlinePlus, AiFillCloseCircle } from 'react-icons/ai'
+
+import { BsFillCartCheckFill, BsTrash3 } from 'react-icons/bs'
+
+export function Button({configCss, onClick, text}: IButton) {
     return (
           <S.Button className={configCss} onClick={onClick}>{text}</S.Button>
     )
 }
-export function ButtonAdd({ConfigCss, onClick, Status}: any) {
+export function ButtonAdd({configCss, onClick, status}: IButton) {
     return (
-        <S.ButtonAdd onClick={onClick} className={ConfigCss}>
+        <S.ButtonAdd onClick={onClick} className={configCss}>
             {
-                Status ? <AiOutlinePlus className="iconPlus"/> : <BsFillCartCheckFill className="iconAdded" />
+                status ? <AiOutlinePlus className="iconPlus"/> : <BsFillCartCheckFill className="iconAdded" />
             }
         </S.ButtonAdd>
     )
@@ -25,14 +27,14 @@ export function ButtonContact({text}:I.ButtonContact) {
         <S.ButtonTell>{text}</S.ButtonTell>
     )
 }
-export function ButtonCounter({Symbols, onClick}:any){
+export function ButtonCounter({symbols, onClick}:IButton){
     return (
-        <S.BttnCount onClick={onClick} type={Symbols}>
-            {Symbols}
+        <S.BttnCount onClick={onClick} type={symbols}>
+            {symbols}
         </S.BttnCount>
     )
 }
-export function ButtonCloseModal({ConfigCss}:any) {
+export function ButtonCloseModal({configCss}:IButton) {
     const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
     const alterInfoModal = useStore.Modal((state:any) => state.alteredInfoModal)
 
@@ -48,26 +50,26 @@ export function ButtonCloseModal({ConfigCss}:any) {
     }
 
     return (
-        <S.ButtonClose className={ConfigCss} onClick={handleClick}>
+        <S.ButtonClose className={configCss} onClick={handleClick}>
             <AiFillCloseCircle className="iconClose"/>
         </S.ButtonClose>
     )
 }
-export function ButtonRemoveCart({ConfigCss, onClick}:any) {
+export function ButtonRemoveCart({configCss, onClick}:IButton) {
     return (
-        <S.ButtonRemove className={ConfigCss} onClick={onClick}>
+        <S.ButtonRemove className={configCss} onClick={onClick}>
             <BsTrash3 className="iconTrash"/>
         </S.ButtonRemove>
     )
 }
-export function CheckoutButtons({text, onClick}: any) {
+export function CheckoutButtons({text, onClick}: IButton) {
     return ( 
         <S.ButtonPayment onClick={onClick}>
             <S.Text>{text}</S.Text>
         </S.ButtonPayment>
     )
 }
-export function PaymentButtons({text, onClick}: any) {
+export function PaymentButtons({text, onClick}: IButton) {
     return (
         <S.OptionsPaymentBttn onClick={onClick}>
             {text}

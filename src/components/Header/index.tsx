@@ -55,9 +55,9 @@ export function Header() {
 
     return (
         <S.Header>
-            <LogoImage  Profile={Profile}   Status={stts === 'Close' ? 'Off' : 'On'}/>
+            <LogoImage  Profile={Profile} Status={stts === 'Close' ? 'Off' : 'On'}/>
             <Link href='/cart'>
-                <IconCart   Number={itensCart}          Status={stts}/>
+                <IconCart   Number={itensCart} Status={stts}/>
             </Link>
         </S.Header>
     )

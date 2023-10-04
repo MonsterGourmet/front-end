@@ -3,15 +3,9 @@ import Image from "next/image";
 
 import * as S from "./styled";
 
+import { IProductCategory } from "@/types";
 
-interface IProduct {
-  product: {
-     imgURL: string ;
-     category: string;
-  }
-}
-
-export function Product({ product, onClick }:any) {
+export function Product({ product, onClick }: IProductCategory) {
      return (
           <S.Product onClick={onClick}>
                <S.Text as='h1'>{product.category}</S.Text>

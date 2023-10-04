@@ -11,7 +11,7 @@ export function ListCard() {
 
      const filteredList = loadDataOnCategory.filter( item => item.category === getOption )
      const list = filteredList[0].products
-     //TODOS: Transform in function
+
      return (
           <S.SList>
                {
