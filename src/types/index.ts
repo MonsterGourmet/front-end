@@ -24,6 +24,7 @@ export interface Type {
      Status: 'Open' | 'Close' 
 }
 export interface IDefaultProduct {
+     imgURL: string;
      carnes: string;
      id: number;
      name: string;
