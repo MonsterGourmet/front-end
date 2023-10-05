@@ -52,12 +52,12 @@ const BoxInfo = styled.div`
           line-height: 30px;
      }
 
-     :where(hr){
+     /* :where(hr){
           height: 0.5px;
 
           background-color: rgba(247, 122, 32, 1);
           border: 0.5px solid transparent;
-     }
+     } */
 
 `
 const Text = styled.p`
@@ -65,12 +65,18 @@ const Text = styled.p`
      font-weight: 400;
      line-height: 27px; */
 
-     span{
-          color: var(--color-Brand1);
+     /* color: var(--color-Brand1); */
 
-          font-size: 32px;
+
+
+     span{
+          color: var(--color-Grey0);
+
+          /* font-size: 32px;
           font-weight: 700;
-          line-height: 39px;
+          line-height: 39px; */
+
+          border-bottom: 0.5px solid rgba(247, 122, 32, 1);
      }
 `
 
