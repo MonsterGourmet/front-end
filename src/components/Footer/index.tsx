@@ -12,7 +12,7 @@ export function Footer() {
                <S.ContainerFooter>
                     <LogoText />
                     <S.Text>
-                         <span>Localizada:</span> Pojuca-BA, Rua Antonio Mota
+                    Pojuca-BA, Rua Antonio Mota
                     </S.Text>
                     <Signature />
                </S.ContainerFooter>

@@ -7,7 +7,7 @@ import { Open_Sans, Inter } from "next/font/google";
 const inter = Inter({ subsets: ['latin'] })
 
 const Opens = Open_Sans({ subsets: ['latin'] })
-//TODOS: ADD TYPE
+//TODOS: ADD TYPEpeso
 export function InfoCard({Product}:any) {     
      return (
           <S.Cardinfo>
@@ -16,16 +16,13 @@ export function InfoCard({Product}:any) {
                </S.Figure>
                <S.BoxInfo className={Opens.className}>
                     <S.Text className={inter.className} as='h1'>{Product.name}</S.Text>
-                    { Product.bread && <S.Text className="description">{Product.bread}</S.Text> }      
-                    <hr></hr>
-                    { Product.carnes && <S.Text className="description">{Product.carnes}</S.Text>  }
-                    <hr></hr>
-                    { Product.salad && <S.Text className="description">Salada - {Product.salad}</S.Text>  }
-                    <hr></hr>
-                    { Product.molhos && <S.Text className="description">Molhos - {Product.molhos}</S.Text>  }  
-                    <hr></hr>          
-                    { Product.descripition && <S.Text className="description">{Product.descripition}</S.Text>  }  
-                    <hr></hr>                 
+                    { Product.bread && <S.Text className="description"><span>{Product.bread}.</span></S.Text> }      
+                    { Product.size && <S.Text className="description"><span> Tamanho - {Product.size}.</span></S.Text>  }
+                    { Product.carnes && <S.Text className="description"><span>{Product.carnes}.</span></S.Text>  }
+                    { Product.salad && <S.Text className="description"><span> Salada - {Product.salad}.</span></S.Text>  }
+                    { Product.molhos && <S.Text className="description"><span> Molhos - {Product.molhos}.</span></S.Text>  }  
+                    { Product.peso && <S.Text className="description"><span> Peso - {Product.peso}.</span></S.Text>  }  
+                    { Product.descripition && <S.Text className="description"><span>{Product.descripition}.</span></S.Text>  }  
                </S.BoxInfo>
           </S.Cardinfo>
      )    
