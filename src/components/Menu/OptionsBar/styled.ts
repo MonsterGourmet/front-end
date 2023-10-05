@@ -1,6 +1,7 @@
 'use client'
 
 import { styled } from "styled-components";
+import { Text } from "../styled";
 
 const NavBarHorizontal = styled.nav`
      height: 60px;
@@ -48,7 +49,7 @@ const NavBarHorizontal = styled.nav`
 `
 const Option = styled.li`
      height: 40px;
-     min-width: 130px;
+     min-width: 140px;
 
      transition: 200ms linear;
 
@@ -60,12 +61,13 @@ const Option = styled.li`
      background-color: var(--color-White);
      color: var(--color-Brand1);
 
+     flex-wrap: nowrap;
      justify-content: center;
      align-items: center;
      display: flex;
 
      cursor: pointer;
-
+  
      .Icon{
           display: none;   
           

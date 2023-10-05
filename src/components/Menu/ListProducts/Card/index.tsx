@@ -12,7 +12,7 @@ import { ButtonAdd } from "@/components/Button"
 
 import { usePersistedState } from '@/utils/usePersist'
 
-
+//TODOS: ADD TYPE
 export function Card({Product, N}: any) {
      const [ cart, setCart] = usePersistedState(`${Product.id}`,true)
 
@@ -32,8 +32,10 @@ export function Card({Product, N}: any) {
      return (
           <S.CardDefault $Delay={`swing-in-left-fwd 1.${N}s both linear`} $isCard={cart}>
                <S.ContainerCard $isCard={cart}>
-                    <Image className={"Photo"} src={Lanche} alt="Foto do lanche" />
-                    <S.Infos>
+                    <figure>
+                         <Image className="Photos" src={Product.imgURL} alt="Foto do lanche" fill={true} />
+                    </figure>
+                    <S.Infos $isCard={cart}>
                          <S.Text as='h2' $isCard={cart}>{Product.name}</S.Text>
                          <S.Text as='h4' $isCard={cart}>
                               <span>
@@ -45,9 +47,11 @@ export function Card({Product, N}: any) {
                          </S.Text>
                     </S.Infos>
                     <ButtonAdd onClick={handleClick} configCss={"configBttnCls"} status={cart}/>
-                    <S.Type $isCard={cart}>
-                         <S.Text  $isCard={cart}>Artesanal</S.Text>
-                    </S.Type>
+                   {
+                    Product.type ?  (<S.Type $isCard={cart}>
+                    <S.Text  $isCard={cart}>Artesanal</S.Text>
+               </S.Type>) : null
+                   }
                </S.ContainerCard>
           </S.CardDefault>
      )

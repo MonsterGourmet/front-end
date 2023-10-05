@@ -16,7 +16,7 @@ export const Input = ({ label, variant, register, ...props }: InputProps) => {
   );
 };
 
-export const SelectInput = () => {
+export const SelectInput = ({register, ...props}: InputProps) => {
   const [neighborhood, setneighborhood] = useState('');
 
   const setterAddress = useStore.Cart(state => state.setterAddress)
@@ -24,22 +24,25 @@ export const SelectInput = () => {
 
   const handleneighborhoodChange = (event: any) => {
     setneighborhood(event.target.value); 
-
+    const bar = event.target.value
+    
     const completeAddress = {
       ...getterAddress,
-      bairro: neighborhood
-    }
+      bairro : bar,
 
+    }
+    // console.log(completeAddress)
+    
     setterAddress(completeAddress)
   };
 
   return (
-    <S.SelectStructure onChange={handleneighborhoodChange}>
+    <S.SelectStructure {...register} onChange={handleneighborhoodChange}>
       <optgroup label="Bairros disponivéis">
         <option value="">Escolha seu bairro</option>
-        <option value="Star">Star</option>
-        <option value="Los Angeles">Los Angeles</option>
-        <option value="Cruzeiro">Cruzeiro</option>
+        <option value="Star-12">Star</option>
+        <option value="Los Angeles-3">Los Angeles</option>
+        <option value="Cruzeiro-5">Cruzeiro</option>
       </optgroup>
     </S.SelectStructure>
   )
