@@ -141,6 +141,7 @@ const Address = styled.div`
 
      padding: 2px 1.5px;
 
+     justify-content: space-between;
      flex-direction: row;
      align-items: center;
      display: flex;

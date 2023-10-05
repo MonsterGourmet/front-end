@@ -89,7 +89,7 @@ export function Checkout() {
                     <S.Text>
                          Observação
                     </S.Text>
-                    <textarea onChange={(Event)=>Obs(Event.target.value)}  placeholder="Digite aqui sua observações">
+                    <textarea onChange={(event)=>Obs(event.target.value)}  placeholder="Digite aqui sua observações">
                     </textarea>
                </S.SpaceForNotes>
                <S.SpaceForButtons>
