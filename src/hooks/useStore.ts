@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { persist } from "zustand/middleware";
+import { persist, createJSONStorage } from 'zustand/middleware'
 
 // import { Product } from "@/providers/Types/interface";
 import { IMdl_StateAction, IMnu_StateAction } from "./types";
@@ -9,9 +9,7 @@ import { IDefaultProduct } from "@/types";
 const initialState = {
   Cart: {
     cart: [],
-    address: {
-      bairro: ''
-    },
+    address: {},
     sttsCart: 'null',
     observation: '',
     countCart: 0,
@@ -77,6 +75,8 @@ const Cart = create(persist(
 
       set(() => ({ valueDelivery: value }))
 
+      console.log(get().valueDelivery)
+
     },
     moreItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -96,9 +96,9 @@ const Cart = create(persist(
 
       console.log(vleTotal)
     
-      set(() => ({ cart: updatedCart }));
-      set(() =>({ valueSub: subTotal }))
-      set(() =>({ valueTotal: vleTotal }))
+      set(() => ({ cart: updatedCart }))
+      set(() => ({ valueSub: subTotal }))
+      set(() => ({ valueTotal: vleTotal }))
     },
     lessItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -225,7 +225,6 @@ const Cart = create(persist(
   }),
   {
     name: "@MonsterGourmet(useStoreCart)",
-    getStorage: () => localStorage
   }
 ))
 

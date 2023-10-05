@@ -49,7 +49,7 @@ function ContentModal({info}: any) {
                     return (
                     <Input label="Tem troco ?" placeholder="Ex: 50,00" 
                     type="number"  min="0.00" max="10000.00" 
-                    step="0.01" onChange={(e)=>{setChange(e.target.value)}}/> 
+                    step="0.01" onChange={(event)=>{setChange(event.target.value)}}/> 
                     )
                case 'Cartão':
                     return(

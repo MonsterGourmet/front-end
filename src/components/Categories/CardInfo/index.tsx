@@ -7,7 +7,7 @@ import { Open_Sans, Inter } from "next/font/google";
 const inter = Inter({ subsets: ['latin'] })
 
 const Opens = Open_Sans({ subsets: ['latin'] })
-//TODOS: ADD TYPEpeso
+//TODOS: ADD TYPE
 export function InfoCard({Product}:any) {     
      return (
           <S.Cardinfo>
