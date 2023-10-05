@@ -19,7 +19,7 @@ export function CartCard({Product}: IProductCart) {
           const data = JSON.stringify(value)
           const Key  = key.toString()
 
-          const storage  = window.localStorage.setItem(Key, data)
+          const storage = window.localStorage.setItem(Key, data)
           
           return storage
      }
