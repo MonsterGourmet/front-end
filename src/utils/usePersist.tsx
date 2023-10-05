@@ -43,44 +43,46 @@
      
 //      return [state, setState];
 // }
-import { useEffect, useState, Dispatch, SetStateAction, } from 'react'
+// import { Dispatch, SetStateAction, } from 'react'
 
-type Response<T> = [
-     T,   
-     Dispatch<SetStateAction<T>>,
-];
+import { create } from 'zustand'
 
-export function usePersistedState<T>(key: string, initialState: T): Response<T> {
-     const [state, setState] = useState(() => {
-          const storageValue = window.localStorage.getItem(key);
-     
-     if (storageValue) {
-          return JSON.parse(storageValue);
-     } else {
-          return initialState;
-     }
-     });
-     
-     useEffect(() => {
-          localStorage.setItem(key, JSON.stringify(state));
-     }, [key, state]);
-     
-     return [state, setState];
+import { persist } from 'zustand/middleware'
+
+export function useRemPersistedState<T>(key: any, initialState: any) {
+     const useStore = create<any>(persist(
+          (set) => ({
+          cart: initialState,
+
+          setCart: (newCart: any) => {
+               set({ cart: newCart });
+          },
+       }), 
+       {
+         name: `${key}`, 
+       })
+     );
+   
+     const { cart, setCart } = useStore();
+   
+     return [cart, setCart] as const;
 }
-export function useRemPersistedState<T>(key: string, initialState: T): Response<T> {
-     const [state, setState] = useState(() => {
-          const storageValue = window.localStorage.getItem(key);
-     
-     if (storageValue) {
-          return JSON.parse(storageValue);
-     } else {
-          return initialState;
-     }
-     });
-     
-     useEffect(() => {
-          localStorage.setItem(key, JSON.stringify(state));
-     }, [key, state]);
-     
-     return [state, setState];
+
+export function usePersistedState<T>(key: any, initialState: any) {
+     const useStore = create<any>(persist(
+          (set) => ({
+          cart: initialState,
+
+          setCart: (newCart: any) => {
+           set({ cart: newCart });
+          },
+       }), 
+       {
+         name: `${key}`, 
+       })
+     );
+   
+     const { cart, setCart } = useStore();
+   
+     return [cart, setCart] as const;
 }

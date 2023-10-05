@@ -22,9 +22,11 @@ export const SelectInput = ({register, ...props}: InputProps) => {
     <S.SelectStructure {...register} >
       <optgroup label="Bairros disponivéis">
         <option value="-0">Escolha seu bairro</option>
-        <option value="Star-12">Star</option>
-        <option value="Los Angeles-3">Los Angeles</option>
+        <option value="Centro-5">Centro</option>
+        <option value="Central-8">Central</option>
         <option value="Cruzeiro-5">Cruzeiro</option>
+        <option value="Caboclo-6">Caboclo</option>
+        <option value="Star-12">Star</option>
       </optgroup>
     </S.SelectStructure>
   )
