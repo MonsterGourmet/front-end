@@ -2,6 +2,8 @@ import { create } from "zustand";
 
 import { persist, createJSONStorage } from 'zustand/middleware'
 
+import { useHref, useNavigate } from 'react-router-dom';
+
 // import { Product } from "@/providers/Types/interface";
 import { IMdl_StateAction, IMnu_StateAction } from "./types";
 import { IDefaultProduct } from "@/types";
@@ -67,6 +69,9 @@ const Cart = create(persist(
       set(() => ({ cart: [...newCart] }))
     },
     addValueDelivery: () => {
+      
+      set({ address: { bairro : get().address.bairro } })
+      
       const neighborhood = get().address.bairro
 
       const findIndex = neighborhood.indexOf('-')
@@ -214,6 +219,19 @@ const Cart = create(persist(
       order += '\n'
 
       console.log(order)
+      let encode = encodeURI(order);
+
+      let URL = `https://wa.me/${71999099688}?text=${encode}`;
+
+      const openExternalLink = (url: any) => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank'; // Abre o link em uma nova aba/janela
+        link.click();
+      };
+
+      openExternalLink(URL)
+
     },
 
     setterObservation: (setObservation: string) => set({ observation: setObservation}),
