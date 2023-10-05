@@ -9,8 +9,11 @@ import { IDefaultProduct } from "@/types";
 const initialState = {
   Cart: {
     cart: [],
-    address: {},
+    address: {
+      bairro: ''
+    },
     sttsCart: 'null',
+    observation: '',
     countCart: 0,
     change: 0,
     payment: '',
@@ -26,7 +29,7 @@ const initialState = {
     }
   },
   Menu: {
-    optionBar: 'Burguer'
+    optionBar: 'Artesanais'
   }
 }
 
@@ -58,11 +61,22 @@ const Cart = create(persist(
         value: item.price,
         qtdd: 1,
       }
+
       set((state: any) => ({ cart: [addInfoItem, ...state.cart] }))
     },
     remCart: (item: IDefaultProduct) => {
       const newCart = get().cart.filter((Prdct: any) => Prdct.name !== item.name)
       set(() => ({ cart: [...newCart] }))
+    },
+    addValueDelivery: () => {
+      const neighborhood = get().address.bairro
+
+      const findIndex = neighborhood.indexOf('-')
+
+      const value = neighborhood.slice(findIndex + 1, neighborhood.lenght) | 0
+
+      set(() => ({ valueDelivery: value }))
+
     },
     moreItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -77,7 +91,14 @@ const Cart = create(persist(
         return cartItem;
       });
 
+      const subTotal = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
+      const vleTotal = get().valueDelivery + get().valueSub 
+
+      console.log(vleTotal)
+    
       set(() => ({ cart: updatedCart }));
+      set(() =>({ valueSub: subTotal }))
+      set(() =>({ valueTotal: vleTotal }))
     },
     lessItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -92,10 +113,13 @@ const Cart = create(persist(
         }
         return cartItem;
       });
+      const subTotal = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
+      const vleTotal = get().valueSub + get().valueDelivery 
 
       set(() => ({ cart: updatedCart }));
+      set(() =>({ valueSub: subTotal }))
+      set(() =>({ valueTotal: vleTotal }))
     },
-
     closeCart: () => {
       const time = new Date();
       const cart = get().cart;
@@ -118,7 +142,7 @@ const Cart = create(persist(
 
       order += `N Casa - ${get().address.numberHouse} \n`
       order += `Rua - ${get().address.street} \n`
-      order += `Bairro - ${get().address.street} \n`
+      order += `Bairro - ${get().address.bairro} \n`
       order += `Complemento - ${get().address.complement} \n`
       order += `Ponto de referencia - ${get().address.pointReference} \n`
       order += '\n'
@@ -136,40 +160,49 @@ const Cart = create(persist(
         itens += '\n'
       })
 
+      const getValueSub = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
+      const getValueDelivery = get().valueDelivery
+      const getValueTotal = getValueSub + getValueDelivery
+
       order += itens
 
-      order += '----------------------------------------- \n'
+      order += '\n'
 
-      order += `SubTotal: ${get().cart.reduce((acc: any, num: any) => acc + num.value, 0).toLocaleString('pt-br', {
-        style: 'currency',
-        currency: 'BRL'
-      })} \n`
+      order += `OBS: ${get().observation} \n`
 
-      order += `Entrega: ${get().cart.reduce((acc: any, num: any) => acc + num.value, 0).toLocaleString('pt-br', {
-        style: 'currency',
-        currency: 'BRL'
-      })} \n`
-
-      order += `Total: ${get().cart.reduce((acc: any, num: any) => acc + num.value, 0).toLocaleString('pt-br', {
-        style: 'currency',
-        currency: 'BRL'
-      })} \n`
+      order += '\n'
 
       order += '----------------------------------------- \n'
 
       order += '          Pagamento\n'
       order += '\n'
 
-      
-      console.log(get().payment)
-      console.log(get().change)
+      order += `SubTotal: ${getValueSub.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'BRL'
+      })} \n`
 
-      
+      order += '\n'
+
+      order += `Entrega: ${getValueDelivery.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'BRL'
+      })} \n`
+
+      order += '\n'
+
+      order += `Total: ${getValueTotal.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'BRL'
+      })} \n`
+
+      order += '\n'
+
       order += `Tipo de pagamento - ${get().payment} \n`
 
-      const methodPayment = get().payment
+      order += '\n'
 
-      console.log(methodPayment)
+      const methodPayment = get().payment
 
       if(methodPayment === 'Dinheiro'){
         order += `Troco - R$ ${get().change.toLocaleString('pt-br', {
@@ -179,16 +212,16 @@ const Cart = create(persist(
       }
 
       order += '\n'
-      console.log(get().address)
 
       console.log(order)
     },
 
-    setterAddress: (setAddress: any) => set({ address: { ...setAddress } }),
-    setterPayment: (setPayment: any) => set({ payment: setPayment }),
-    setterChange: (setPayment: any) => set({ change: setPayment }),
+    setterObservation: (setObservation: string) => set({ observation: setObservation}),
     setterSub: (setPayment: any) => set({ valueSub: setPayment }),
     setterTotal: (setPayment: any) => set({ valueTotal: setPayment }),
+    setterChange: (setPayment: any) => set({ change: setPayment }),
+    setterPayment: (setPayment: any) => set({ payment: setPayment }),
+    setterAddress: (setAddress: any) => set({ address: { ...setAddress } }),
   }),
   {
     name: "@MonsterGourmet(useStoreCart)",

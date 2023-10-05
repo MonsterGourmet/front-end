@@ -56,9 +56,11 @@ const Type = styled.div<CardProps>`
 
      @keyframes slide-in-right{0%{transform:translateX(10px);opacity:0}100%{transform:translateX(0);opacity:1}}
 `
-const Infos = styled.div`
+const Infos = styled.div<CardProps>`
      height: 93px;
      width: 157px;
+
+     transition: 250ms ease-out;
 
      border-radius: 10px;
      border: 2px solid transparent;
@@ -70,6 +72,11 @@ const Infos = styled.div`
      align-items: flex-start;
      display: flex;
      gap: 5px;   
+
+     border: 2px solid transparent;
+     background-color: transparent;
+
+     /* background-color: ${(props) => (props.$isCard ? 'var(--color-White)' : ' var(--color-Brand1-75) ')}; */
 `
 const CardDefault = styled.li<CardProps>`
      min-height: 160px;
@@ -108,21 +115,35 @@ const ContainerCard = styled.div<CardProps>`
      flex-direction: row;
      align-items: flex-start;
      display: flex;
-     gap: 5px;
+     gap: 1px;
 
      position: relative;
 
+     transition: 250ms ease-out;
 
-     .Photo{
+     figure{
+          width: 100px;
+          height: 100px;
+
           transition: 250ms ease-out;
 
-          width: 102px;
-          height: 93px;
-          
+          border: 2px solid transparent;
+          position: relative;
+
+          background-color: ${(props) => (props.$isCard ? 'var(--color-White)' : 'var(--color-Brand1)')};
+     }
+     figure img {
+          object-fit: cover;
+
+          transition: 250ms ease-out;
+
+          height: 100% !important;
+          width: 100% !important;
+
           border-radius: ${(props) => (props.$isCard ? '10px' : '100%')};
           border: 2px solid transparent;
 
-          background-color: ${(props) => (props.$isCard ? ' var(--color-Brand1-75) ' : 'var(--color-White)')};
+          background-color: var(--color-White); 
      } 
      .configBttnCls{
           position: absolute;

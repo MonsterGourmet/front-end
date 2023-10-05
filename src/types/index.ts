@@ -39,6 +39,7 @@ export interface IProductCart {
           price: number;
           qtdd: number;
           value: number;
+          imgURL: string;
      }
 }
 export interface ICategories {

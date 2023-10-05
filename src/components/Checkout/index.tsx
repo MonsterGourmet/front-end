@@ -3,16 +3,22 @@ import * as useStore from '@/hooks/useStore'
 
 import { Button, CheckoutButtons } from '../Button'
 import Link from 'next/link'
+import { useForm } from 'react-hook-form';
 
 export function Checkout() {
      const cart = useStore.Cart(state => state.cart)
+     const setObs = useStore.Cart(state => state.setterObservation)
      const closeCart = useStore.Cart(state => state.closeCart)
-     
+
+
      const sttsModal = useStore.Modal(state => state.alteredSttsModal)
      const alterInfoModal = useStore.Modal(state => state.alteredInfoModal)
+     
+     const getValueSub = cart.reduce((acc: any, num:any) => acc + num.value,0)
+     const getValueDelivery = useStore.Cart(state => state.valueDelivery)
+     const getValueTotal = getValueSub + getValueDelivery
 
-     const totalCart = cart.reduce((acc: any, num:any) => acc + num.value,0)
-
+     
      const handleClick = () => {
           sttsModal(true)
 
@@ -22,7 +28,6 @@ export function Checkout() {
    
           alterInfoModal(infoModal);
      }
-
 
      const openModal = () => {
           sttsModal(true)
@@ -34,13 +39,17 @@ export function Checkout() {
           alterInfoModal(infoModal);
      }
 
+     const Obs = (data: string) => {
+          setObs(data)
+     }
+
      return (
           <S.Checkout>
                <S.SubTotal>
                     <S.Text>
                          Subtotal:
                     </S.Text>
-                    <S.Text>{totalCart.toLocaleString('pt-br',{
+                    <S.Text>{getValueSub.toLocaleString('pt-br',{
                          style: 'currency',
                          currency: 'BRL'})}     
                     </S.Text>
@@ -50,7 +59,7 @@ export function Checkout() {
                               Entrega : + 
                          </S.Text>
                          <S.Text> 
-                         {totalCart.toLocaleString('pt-br',{
+                         {getValueDelivery.toLocaleString('pt-br',{
                          style: 'currency',
                          currency: 'BRL'})}      
                          </S.Text>
@@ -59,7 +68,7 @@ export function Checkout() {
                     <S.Text>
                          Total:
                     </S.Text>
-                    <S.Text>{totalCart.toLocaleString('pt-br',{
+                    <S.Text>{getValueTotal.toLocaleString('pt-br',{
                          style: 'currency',
                          currency: 'BRL'})}     
                     </S.Text>
@@ -80,8 +89,7 @@ export function Checkout() {
                     <S.Text>
                          Observação
                     </S.Text>
-                    <textarea placeholder="Digite aqui sua observações">
-
+                    <textarea onChange={(Event)=>Obs(Event.target.value)}  placeholder="Digite aqui sua observações">
                     </textarea>
                </S.SpaceForNotes>
                <S.SpaceForButtons>

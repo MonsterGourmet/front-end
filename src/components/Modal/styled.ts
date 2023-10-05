@@ -32,7 +32,7 @@ const Text = styled.p`
 `
 const Modal = styled.aside`
      height: 500px;
-     width: min(325px,90%);
+     width: min(335px,90%);
 
      background-color: var(--color-White);
 

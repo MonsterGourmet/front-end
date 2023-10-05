@@ -14,7 +14,7 @@ const Text = styled.p`
 
 `
 const Product = styled.li`
-     min-width: 166px;
+     min-width: 172px;
      height: 280px;
 
      padding: 12px 0 6px 12px;

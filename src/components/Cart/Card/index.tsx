@@ -18,8 +18,10 @@ export function CartCard({Product}: IProductCart) {
      const setStorage = ( key: number, value: boolean ) => {
           const data = JSON.stringify(value)
           const Key  = key.toString()
+
+          const storage  = window.localStorage.setItem(Key, data)
           
-          return window.localStorage.setItem(Key, data)
+          return storage
      }
 
      const handleClick = () => {
@@ -31,7 +33,9 @@ export function CartCard({Product}: IProductCart) {
      return (
           <S.CardDefault >
                <S.ContainerCard>
-                    <Image className={"Photo"} src={Photo} alt="Foto do lanche" />
+                    <figure>
+                         <Image className={"Photo"} src={Product.imgURL} alt="Foto do lanche" layout="fill"/>
+                    </figure>
                     <S.Infos>
                          <S.Text>{Product.name}</S.Text>
                          <S.Text as='h4'>

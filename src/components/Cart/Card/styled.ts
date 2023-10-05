@@ -116,6 +116,17 @@ const ContainerCard = styled.div`
           position: absolute;
           right: 0;
      }   
+     figure{
+          width: 100px;
+          height: 90px;
+
+          transition: 250ms ease-out;
+
+          border: 2px solid transparent;
+          position: relative;
+
+          background-color: 'var(--color-White)';
+     }
 `
 const BoxCount = styled.div`
      height: 30px;
