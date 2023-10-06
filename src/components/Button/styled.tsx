@@ -40,9 +40,14 @@ const Button = styled.button`
   font-weight: 400;
   line-height: 29px;
 `
-const ButtonTell = styled.button`
+const ButtonTell = styled.div`
   height: 99%;
   width: 100px;
+
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
 
   border-radius: 0px 20px 20px 0px;
   border: 1px solid transparent;

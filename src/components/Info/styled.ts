@@ -13,7 +13,7 @@ const Text = styled.p`
           font-weight: 700;
      }
 `
-const Contact = styled.div`
+const Contact = styled.a`
      height: 40px;
      width: 165px;
 
