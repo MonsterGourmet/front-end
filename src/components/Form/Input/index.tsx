@@ -1,11 +1,10 @@
 'use client'
 
+import * as useStore from '@/hooks/useStore'
 import * as S from "./styled";
 
-import * as useStore from "@/hooks/useStore"
-
-import { useState } from "react";
 import { InputProps } from "./types";
+import { useState } from "react";
 
 export const Input = ({ label, variant, register, ...props }: InputProps) => {
   return (
@@ -17,11 +16,27 @@ export const Input = ({ label, variant, register, ...props }: InputProps) => {
 };
 
 export const SelectInput = ({register, ...props}: InputProps) => {
+  const [neighborhood, setneighborhood] = useState('');
 
+  const setterAddress = useStore.Cart(state => state.setterAddress)
+  const getterAddress = useStore.Cart(state => state.address)
+
+  const handleneighborhoodChange = (event: any) => {
+    setneighborhood(event.target.value); 
+    const bar = event.target.value
+    
+    const completeAddress = {
+      ...getterAddress,
+      bairro : bar,
+
+    }
+    
+    setterAddress(completeAddress)
+  };
   return (
-    <S.SelectStructure {...register} >
+    <S.SelectStructure {...register} onChange={handleneighborhoodChange} >
       <optgroup label="Bairros disponivéis">
-        <option value="-0">Escolha seu bairro</option>
+        <option value="">Escolha seu bairro</option>
         <option value="Centro-5">Centro</option>
         <option value="Central-8">Central</option>
         <option value="Cruzeiro-5">Cruzeiro</option>

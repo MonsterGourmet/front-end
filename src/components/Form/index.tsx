@@ -15,6 +15,7 @@ export function FormAddress() {
 
      const infoAddress = async (data: any) => {
           setterAddress(data)
+          console.log(data)
      };
 
      return (
