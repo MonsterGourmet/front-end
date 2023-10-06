@@ -20,7 +20,7 @@ export const loadDataOnCategory = [
                },
                {
                     id: 2,
-                    imgURL: "/Pinkchese.jpg",
+                    imgURL: "/PhotoPink.jpg",
                     name: 'Pink Cheese',
                     bread: 'Pão de Batata.',
                     carnes: '1x Carne - Blend 130g',
