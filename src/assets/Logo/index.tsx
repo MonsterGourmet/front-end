@@ -22,7 +22,7 @@ export function Signature(): JSX.Element {
                     UI|UX|Desenvolvedor - 
                </SText>
                <SText>
-                    <Link href="" target="_blank">Bruno Abreu</Link>
+                    <Link href="https://www.linkedin.com/in/brunoabreudev/" target="_blank">Bruno Abreu</Link>
                </SText>
           </SContainer>
      )

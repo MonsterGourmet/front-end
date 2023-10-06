@@ -133,6 +133,10 @@ const IconTell = styled.div`
      background-color: var(--color-Brand1);
      color: var(--color-White);
 
+     position: absolute;
+     left: -2px;
+
+
      :first-child{
           font-size: 28px;
      }

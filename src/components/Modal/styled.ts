@@ -98,8 +98,6 @@ const BoxPayment = styled.div`
     margin-top: 35px;
     padding: 10px;
 
-    border: 1px solid red;
-
     position: relative;
 
     flex-direction: row;

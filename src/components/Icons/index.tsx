@@ -11,7 +11,7 @@ import { BsCart, BsCartX, BsFillTelephoneOutboundFill } from "react-icons/bs";
 export function LogoImage({Profile, Status}: I.Logo): JSX.Element {
      return (
           <S.Figure status={Status}>
-               <Link href="https://www.linkedin.com/in/brunoabreudev/">
+               <Link href="https://www.instagram.com/monster_gourmets/">
                     <Image src={Profile} alt="Logo" />
                </Link>
           </S.Figure>

@@ -195,8 +195,10 @@ const SpaceForNotes = styled.div`
      }
 `
 const SpaceForButtons = styled.div`
-     height: 40px;
+     height: 60px;
      width: 100%;     
+
+     padding: 10px 0;
 
      justify-content: space-between;
      flex-direction: row;
@@ -219,7 +221,7 @@ const SpaceForButtons = styled.div`
 
 
                font-size: 1rem;
-               font-weight: 100;
+               font-weight: 500;
           }
      }
   
@@ -229,7 +231,7 @@ const SpaceForButtons = styled.div`
           width: 150px;
 
           font-size: 1rem;
-          font-weight: 100;
+          font-weight: 500;
      }
     
 `
