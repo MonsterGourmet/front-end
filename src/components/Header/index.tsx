@@ -16,8 +16,8 @@ export function Header() {
 
     const itensCart = getItensCart.length
 
-    const openingHour = 16; 
-    const closingHour = 18; 
+    const openingHour = 17; 
+    const closingHour = 23; 
 
     function isStoreOpen() {
         const currentHour = new Date().getHours();
