@@ -54,9 +54,18 @@ const Type = styled.div`
      @keyframes slide-in-right{0%{transform:translateX(10px);opacity:0}100%{transform:translateX(0);opacity:1}}
 `
 const Infos = styled.div`
-     height: 130px;
-     width: 157px;
+     height: 100px;
+     width: 160px;
 
+     text-overflow: ellipsis;
+  overflow: hidden;
+  
+     ${Text}:first-child{
+          text-overflow: ellipsis;
+          overflow: hidden;
+          height: auto;
+
+     }     
      border-radius: 10px;
      border: 2px solid transparent;
 
@@ -71,7 +80,7 @@ const Infos = styled.div`
      gap: 5px;   
 `
 const CardDefault = styled.li`
-     min-height: 145px;
+     min-height: 170px;
      width: 100%;
      
      transition: 200ms ease-in;
@@ -90,7 +99,7 @@ const CardDefault = styled.li`
      display: flex;
 `
 const ContainerCard = styled.div`
-     height: 130px;
+     height: 150px;
      width: 100%;
 
      flex-direction: row;
@@ -118,7 +127,7 @@ const ContainerCard = styled.div`
      }   
      figure{
           width: 100px;
-          height: 90px;
+          height: 100px;
 
           transition: 250ms ease-out;
 

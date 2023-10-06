@@ -5,8 +5,6 @@ import * as useStore from '@/hooks/useStore'
 
 import Profile from "../../../public/LogoOficcial.png"
 
-import { useEffect, useState } from "react"
-
 import { IconCart, LogoImage } from "../Icons"
 
 import Link from 'next/link'
@@ -18,26 +16,28 @@ export function Header() {
 
     const itensCart = getItensCart.length
 
-    const [hour, setHour] = useState(new Date().getHours());
-    const [stts, setStatus] = useState<'Open' | 'Close'>('Close');
+    const openingHour = 16; 
+    const closingHour = 18; 
 
-    const openingHour = 17; 
-    const closingHour = 23; 
-
-    useEffect(() => {
-        const timer = setInterval(() => {
+    function isStoreOpen() {
         const currentHour = new Date().getHours();
-        setHour(currentHour);
+        return currentHour >= openingHour && currentHour < closingHour;
+    }
 
-        if (currentHour >= openingHour && currentHour < closingHour) {
-            setStatus('Open');
+    function checkStoreStatus() {
+        const isOpen = isStoreOpen();
+        if (isOpen) {
+          return 'Open'
         } else {
-            setStatus('Close');
+            return 'Close'
         }
-        }, 60000); 
+    }
 
-        return () => clearInterval(timer); 
-    }, []);
+    const interval = 5 * 60 * 1000; 
+   
+    setInterval(checkStoreStatus, interval);
+
+    const stts = checkStoreStatus()
 
     return (
         <S.Header>

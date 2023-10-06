@@ -24,7 +24,9 @@ export function ButtonAdd({configCss, onClick, status}: IButton) {
 }
 export function ButtonContact({text}:I.ButtonContact) {
     return (
-        <S.ButtonTell>{text}</S.ButtonTell>
+        <S.ButtonTell>
+            {text}
+        </S.ButtonTell>
     )
 }
 export function ButtonCounter({symbols, onClick}:IButton){
