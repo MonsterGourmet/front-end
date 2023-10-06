@@ -1,9 +1,9 @@
 import * as S from './styled'
 import * as useStore from '@/hooks/useStore'
 
-import { Button, CheckoutButtons } from '../Button'
 import Link from 'next/link'
-import { useForm } from 'react-hook-form';
+
+import { Button, CheckoutButtons } from '../Button'
 
 export function Checkout() {
      const cart = useStore.Cart(state => state.cart)
@@ -16,9 +16,9 @@ export function Checkout() {
      
      const getValueSub = cart.reduce((acc: any, num:any) => acc + num.value,0)
      const getValueDelivery = useStore.Cart(state => state.valueDelivery)
-     const getValueTotal = getValueSub + getValueDelivery
+     const getValueTotal =  Number(getValueSub) + Number(getValueDelivery)
 
-     
+
      const handleClick = () => {
           sttsModal(true)
 
@@ -39,7 +39,7 @@ export function Checkout() {
           alterInfoModal(infoModal);
      }
 
-     const Obs = (data: string) => {
+     const getObs = (data: string) => {
           setObs(data)
      }
 
@@ -49,7 +49,7 @@ export function Checkout() {
                     <S.Text>
                          Subtotal:
                     </S.Text>
-                    <S.Text>{getValueSub.toLocaleString('pt-br',{
+                    <S.Text>{Number(getValueSub).toLocaleString('pt-br',{
                          style: 'currency',
                          currency: 'BRL'})}     
                     </S.Text>
@@ -59,7 +59,7 @@ export function Checkout() {
                               Entrega : + 
                          </S.Text>
                          <S.Text> 
-                         {getValueDelivery.toLocaleString('pt-br',{
+                         {Number(getValueDelivery).toLocaleString('pt-br',{
                          style: 'currency',
                          currency: 'BRL'})}      
                          </S.Text>
@@ -89,7 +89,7 @@ export function Checkout() {
                     <S.Text>
                          Observação
                     </S.Text>
-                    <textarea onChange={(event)=>Obs(event.target.value)}  placeholder="Digite aqui sua observações">
+                    <textarea onChange={(event: React.ChangeEvent<HTMLTextAreaElement>)=>getObs(event.target.value)}  placeholder="Digite aqui sua observações">
                     </textarea>
                </S.SpaceForNotes>
                <S.SpaceForButtons>

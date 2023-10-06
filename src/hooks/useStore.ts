@@ -18,8 +18,8 @@ const initialState = {
     change: 0,
     payment: '',
     valueSub: 0,
-    valueTotal: 0,
-    valueDelivery: 0,
+    valueTotal: '',
+    valueDelivery: '',
   },
   Modal: {
     sttsModal: false,
@@ -54,6 +54,13 @@ const Cart = create(persist(
   (set: any, get: any) => ({
     ...initialState.Cart,
 
+    
+    setterSub: (setPayment: any) => set({ valueSub: setPayment }),
+    setterTotal: (setPayment: any) => set({ valueTotal: setPayment }),
+    setterChange: (setPayment: any) => set({ change: setPayment }),
+    setterPayment: (setPayment: any) => set({ payment: setPayment }),
+    setterAddress: (setAddress: any) => set({ address: { ...setAddress } }),
+    setterObservation: (setObservation: string) => set({ observation: setObservation}),
 
     addCart: (item: IDefaultProduct) => {
       const addInfoItem = {
@@ -69,14 +76,12 @@ const Cart = create(persist(
       set(() => ({ cart: [...newCart] }))
     },
     addValueDelivery: () => {
-      
-      set({ address: { bairro : get().address.bairro } })
-      
+            
       const neighborhood = get().address.bairro
 
       const findIndex = neighborhood.indexOf('-')
 
-      const value = neighborhood.slice(findIndex + 1, neighborhood.lenght) | 0
+      const value = neighborhood.slice(findIndex + 1, neighborhood.lenght) 
 
       set(() => ({ valueDelivery: value }))
 
@@ -173,7 +178,7 @@ const Cart = create(persist(
 
       order += '\n'
 
-      order += `OBS: ${get().observation} \n`
+      order += `Observações enviadas: ${get().observation} \n`
 
       order += '\n'
 
@@ -234,12 +239,6 @@ const Cart = create(persist(
 
     },
 
-    setterObservation: (setObservation: string) => set({ observation: setObservation}),
-    setterSub: (setPayment: any) => set({ valueSub: setPayment }),
-    setterTotal: (setPayment: any) => set({ valueTotal: setPayment }),
-    setterChange: (setPayment: any) => set({ change: setPayment }),
-    setterPayment: (setPayment: any) => set({ payment: setPayment }),
-    setterAddress: (setAddress: any) => set({ address: { ...setAddress } }),
   }),
   {
     name: "@MonsterGourmet(useStoreCart)",
