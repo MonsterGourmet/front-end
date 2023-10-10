@@ -1,5 +1,6 @@
+import { AwaitCart } from "@/components/Cart/warning";
+
 export default function Loading() {
-     return ( 
-          <h1>Loading...</h1>
-     )
+     return <AwaitCart />
+     
 }
