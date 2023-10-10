@@ -12,12 +12,12 @@ import Link from 'next/link'
 
 export function Header() {    
      
-    const getItensCart = useStore.Cart((state:any) => state.cart)
+    const getItensCart = useStore.Cart(state => state.cart)
 
     const itensCart = getItensCart.length
 
-    const openingHour = 17; 
-    const closingHour = 23; 
+    const openingHour = 14; 
+    const closingHour = 18; 
 
     function isStoreOpen() {
         const currentHour = new Date().getHours();
