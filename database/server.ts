@@ -454,10 +454,61 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-Burguer.png",
           products: [
                {
-                    name: 'Coca',
-                    imgURL: "/Photo-Burguer.png",
+                    id: 42,
+                    imgURL: "/EnergeticoMonster.jpg",
+                    name: 'Energético Monster',
+                    size: '437ml',
                     price: 12.00
-               }
+               },
+               {
+                    id: 44,
+                    imgURL: "/ChaMatte.jpg",
+                    name: 'Chá Matte Limão',
+                    size: '250ml',
+                    price: 3.00
+               },
+               {
+                    id: 45,
+                    imgURL: "/ChaMatte2.jpg",
+                    name: 'Chá Matte Pessego',
+                    size: '250ml',
+                    price: 3.00
+               },
+               {
+                    id: 46,
+                    imgURL: "/H2O.jpg",
+                    name: 'H2O',
+                    size: '500ml',
+                    price: 6.00
+               },
+               {
+                    id: 47,
+                    imgURL: "/AguaSgás.jpg",
+                    name: 'Água sem gás',
+                    size: '500ml',
+                    price: 3.00
+               },
+               {
+                    id: 48,
+                    imgURL: "/AguaCgás.jpg",
+                    name: 'Água com gás',
+                    size: '500ml',
+                    price: 3.00
+               },
+               {
+                    id: 49,
+                    imgURL: "/JuniSukitLaranja.jpg",
+                    name: 'Juninho Sukita Laranja',
+                    size: '200ml',
+                    price: 3.00
+               },
+               {
+                    id: 50,
+                    imgURL: "/JuniSukitLaranja.jpg",
+                    name: 'Juninho Sukita Laranja',
+                    size: '200ml',
+                    price: 3.00
+               },
           ]
      },
      {
@@ -465,9 +516,40 @@ export const loadDataOnCategory = [
           imgURL: "/Photo-Burguer.png",
           products: [
                {
-                    name: 'Milk Shake de Morango',
+                    id: 37,
+                    imgURL: "/MilkShaOreo.jpg",
+                    name: 'Milk Shake Oreo',
+                    size: '500ml',
                     price: 12.00
-               }
+               },
+               {
+                    id: 38,
+                    imgURL: "/MilkShaChocol.jpg",
+                    name: 'Milk Shake Chocolate',
+                    size: '500ml',
+                    price: 12.00
+               },
+               {
+                    id: 39,
+                    imgURL: "/MilkShaMoran.jpg",
+                    name: 'Milk Shake Morango',
+                    size: '500ml',
+                    price: 12.00
+               },
+               {
+                    id: 40,
+                    imgURL: "/MilkShaOvoMal.jpg",
+                    name: 'Milk Shake Ovomaltine',
+                    size: '500ml',
+                    price: 12.00
+               },
+               {
+                    id: 41,
+                    imgURL: "/MilkShaPaçoca.jpg",
+                    name: 'Milk Shake Paçoca',
+                    size: '500ml',
+                    price: 12.00
+               },
           ]
      },
 ]

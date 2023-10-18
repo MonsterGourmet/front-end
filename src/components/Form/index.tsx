@@ -13,9 +13,13 @@ export function FormAddress() {
      const setterAddress = useStore.Cart(state => state.setterAddress)
      const getAddress = useStore.Cart(state => state.addValueDelivery)
 
+     const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
+      
+     const handleClick = () => {
+         sttsModal(false)
+     }
      const infoAddress = async (data: any) => {
           setterAddress(data)
-          console.log(data)
      };
 
      return (

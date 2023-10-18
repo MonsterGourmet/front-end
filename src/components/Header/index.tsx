@@ -16,25 +16,31 @@ export function Header() {
 
     const itensCart = getItensCart.length
 
-    const openingHour = 14; 
-    const closingHour = 18; 
+    const openingHour: number = 17; 
+    const closingHour: number = 23; 
 
-    function isStoreOpen() {
-        const currentHour = new Date().getHours();
+    function isStoreOpen(): boolean {
+        const currentHour: number = new Date().getHours();
         return currentHour >= openingHour && currentHour < closingHour;
     }
 
+    function isWorkingDay(): boolean {
+        const today: number = new Date().getDay(); 
+        return today > 2 && today < 7; 
+    }
+
     function checkStoreStatus() {
-        const isOpen = isStoreOpen();
-        if (isOpen) {
-          return 'Open'
+        const isOpen: boolean = isStoreOpen();
+        const isWorking: boolean = isWorkingDay();
+
+        if (isOpen && isWorking) {
+            return 'Open';
         } else {
-            return 'Close'
+            return 'Close';
         }
     }
 
-    const interval = 5 * 60 * 1000; 
-   
+    const interval: number = 5 * 60 * 1000; 
     setInterval(checkStoreStatus, interval);
 
     const stts = checkStoreStatus()

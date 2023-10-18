@@ -98,6 +98,12 @@ function ContentModal({info}: any) {
           const getPay = useStore.Cart(state => state.payment)
           const setPay = useStore.Cart(state => state.setterPayment)
 
+          const sttsModal = useStore.Modal(state => state.alteredSttsModal)
+      
+          const handleClick = () => {
+               sttsModal(false)
+          }
+
           return (
                <S.BoxPayment>
                <S.Text>Pagamento</S.Text>
@@ -107,7 +113,7 @@ function ContentModal({info}: any) {
                     <S.BoxComplement>
                          { MethodsPayment(getPay) }
                     </S.BoxComplement>
-                    <Button configCss='configBttn' text='Confirmar' />
+                    <Button onClick={handleClick} configCss='configBttn' text='Confirmar' />
                </S.BoxPayment>
           )
      }
