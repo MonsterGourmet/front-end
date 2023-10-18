@@ -1,8 +1,7 @@
 import { create } from "zustand";
 
-import { persist, createJSONStorage } from 'zustand/middleware'
+import { persist } from 'zustand/middleware'
 
-import { useHref, useNavigate } from 'react-router-dom';
 
 // import { Product } from "@/providers/Types/interface";
 import { IMdl_StateAction, IMnu_StateAction } from "./types";
@@ -54,7 +53,6 @@ const Cart = create(persist(
   (set: any, get: any) => ({
     ...initialState.Cart,
 
-    
     setterSub: (setPayment: any) => set({ valueSub: setPayment }),
     setterTotal: (setPayment: any) => set({ valueTotal: setPayment }),
     setterChange: (setPayment: any) => set({ change: setPayment }),
@@ -75,8 +73,13 @@ const Cart = create(persist(
       const newCart = get().cart.filter((Prdct: any) => Prdct.name !== item.name)
       set(() => ({ cart: [...newCart] }))
     },
-    addValueDelivery: () => {
-            
+    addValueDelivery: () => {            
+        // const sttsModal = Modal(state => state.alteredSttsModal)
+      
+        // sttsModal(false)
+      const otherStore = Modal.getState()
+      otherStore.alteredSttsModal(false)
+     
       const neighborhood = get().address.bairro
 
       const findIndex = neighborhood.indexOf('-')
@@ -84,8 +87,6 @@ const Cart = create(persist(
       const value = neighborhood.slice(findIndex + 1, neighborhood.lenght) 
 
       set(() => ({ valueDelivery: value }))
-
-      console.log(get().valueDelivery)
 
     },
     moreItem: (item: any) => {
@@ -230,13 +231,22 @@ const Cart = create(persist(
 
       const openExternalLink = (url: any) => {
         const link = document.createElement('a');
+
+        localStorage.clear()
+        
         link.href = url;
-        link.target = '_blank'; // Abre o link em uma nova aba/janela
+        link.target = '_blank'; 
         link.click();
       };
 
       openExternalLink(URL)
 
+      set({ cart: [] })
+      set({ address: { } })
+      set({ observation: ''})
+      set({ valueDelivery: 0 })
+      set({ payment: '' })
+      set({ change: '' })
     },
 
   }),
