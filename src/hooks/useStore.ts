@@ -74,12 +74,6 @@ const Cart = create(persist(
       set(() => ({ cart: [...newCart] }))
     },
     addValueDelivery: () => {            
-        // const sttsModal = Modal(state => state.alteredSttsModal)
-      
-        // sttsModal(false)
-      const otherStore = Modal.getState()
-      otherStore.alteredSttsModal(false)
-     
       const neighborhood = get().address.bairro
 
       const findIndex = neighborhood.indexOf('-')
@@ -88,6 +82,9 @@ const Cart = create(persist(
 
       set(() => ({ valueDelivery: value }))
 
+      const otherStore = Modal.getState()
+
+      otherStore.alteredSttsModal(false)
     },
     moreItem: (item: any) => {
       const updatedCart = get().cart.map((cartItem: any) => {
@@ -224,7 +221,6 @@ const Cart = create(persist(
 
       order += '\n'
 
-      console.log(order)
       let encode = encodeURI(order);
 
       let URL = `https://wa.me/${71996944473}?text=${encode}`;

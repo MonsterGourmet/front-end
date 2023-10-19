@@ -13,13 +13,9 @@ export function FormAddress() {
      const setterAddress = useStore.Cart(state => state.setterAddress)
      const getAddress = useStore.Cart(state => state.addValueDelivery)
 
-     const sttsModal = useStore.Modal((state:any) => state.alteredSttsModal)
-      
-     const handleClick = () => {
-         sttsModal(false)
-     }
-     const infoAddress = async (data: any) => {
+     const infoAddress = (data: any) => {
           setterAddress(data)
+          getAddress()
      };
 
      return (
@@ -29,7 +25,7 @@ export function FormAddress() {
                <Input label="Complemento" placeholder="Ex: Casa" register={register('complement')}/>
                <Input label="Ponto de referencia" placeholder="Ex: Ao lado da Barbearia" register={register('pointReference')}/>      
                <SelectInput register={register('bairro')} />
-               <Button text='Confirmar' onClick={getAddress}/>
+               <Button text='Confirmar' />
           </S.Form>
      )
 }

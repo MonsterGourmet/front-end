@@ -23,11 +23,11 @@ export const SelectInput = ({register, ...props}: InputProps) => {
 
   const handleneighborhoodChange = (event: any) => {
     setneighborhood(event.target.value); 
-    const bar = event.target.value
+    const currentNeighborhood = event.target.value
     
     const completeAddress = {
       ...getterAddress,
-      bairro : bar,
+      bairro : currentNeighborhood,
     }
     
     setterAddress(completeAddress)
