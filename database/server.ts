@@ -421,8 +421,8 @@ export const loadDataOnCategory = [
                     id: 34,
                     imgURL: "/BTT.jpg",
                     name: 'Batata Tradicional',
-                    size: 'M',
-                    peso: '350g',
+                    size: '350g',
+                    peso: 'M',
                     descripition: 'Com Sal',
                     price: 16.00,
                     qtdd: 0,
@@ -431,8 +431,8 @@ export const loadDataOnCategory = [
                     id: 35,
                     imgURL: "/BR.jpg",
                     name: 'Batata Recheada',
-                    size: 'M',
-                    peso: '350g',
+                    size: '350g',
+                    peso: 'M',
                     descripition: 'Cheddar + Bacon',
                     price: 20.00,
                     qtdd: 0,
@@ -441,8 +441,8 @@ export const loadDataOnCategory = [
                     id: 36,
                     imgURL: "/BTCS.jpg",
                     name: 'Batata com Carne do Sol',
-                    size: 'M',
-                    peso: '350g',
+                    size: '350g',
+                    peso: 'M',
                     descripition: 'Catupiry +  Carne do Sol',
                     price: 20.00,
                     qtdd: 0,
@@ -498,22 +498,78 @@ export const loadDataOnCategory = [
                {
                     id: 49,
                     imgURL: "/JuniSukitLaranja.jpg",
-                    name: 'Juninho Sukita Laranja',
+                    name: 'Juninho S. Laranja',
+                    size: '200ml',
+                    price: 3.00
+               },
+               {
+                    id: 55,
+                    imgURL: "/JuninhoAntartica.jpg",
+                    name: 'Juninho Antartica',
                     size: '200ml',
                     price: 3.00
                },
                {
                     id: 50,
-                    imgURL: "/JuniSukitLaranja.jpg",
-                    name: 'Juninho Sukita Laranja',
+                    imgURL: "/LataSodaLimonada.jpg",
+                    name: 'Lata Soda Limonada',
+                    size: '350ml',
+                    price: 5.00
+               },
+               {
+                    id: 51,
+                    imgURL: "/JuniSodaLimao.jpg",
+                    name: 'Juninho Soda Limão',
                     size: '200ml',
                     price: 3.00
+               },
+               {
+                    id: 52,
+                    imgURL: "/Juninho Pepsi.jpg",
+                    name: 'Juninho Pepsi',
+                    size: '350ml',
+                    price: 3.00
+               },
+               {
+                    id: 53,
+                    imgURL: "/LataPepsi.jpg",
+                    name: 'Lata Pepsi',
+                    size: '350ml',
+                    price: 5.00
+               },
+               {
+                    id: 57,
+                    imgURL: "/LataCoca.jpg",
+                    name: 'Lata Coca',
+                    size: '350ml',
+                    price: 5.00
+               },
+               {
+                    id: 56,
+                    imgURL: "/LitroAntartica.jpg",
+                    name: 'Litro Antartica',
+                    size: '1 Litro',
+                    price: 8.00
+               },
+               {
+                    id: 54,
+                    imgURL: "/LitroPepsi.jpg",
+                    name: 'Litro Pepsi',
+                    size: '1 Litro',
+                    price: 8.00
+               },
+               {
+                    id: 58,
+                    imgURL: "/LitroCoca.jpg",
+                    name: 'Litro Coca',
+                    size: '1 Litro',
+                    price: 8.00
                },
           ]
      },
      {
           category: 'Milk Shake',
-          imgURL: "/Photo-Burguer.png",
+          imgURL: "/MilkShaOreo-removebg-preview.png",
           products: [
                {
                     id: 37,
