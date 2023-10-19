@@ -16,9 +16,9 @@ export function Information() {
                     <S.Text>Aproveite nosso cardapio, realize seu pedido pelo site, e será levado a concluir no nosso Zap de forma <span>rápida</span> e <span>segura</span>.</S.Text>
                     <S.Text>Fucionamos <span>das 17:00 ás 23:00</span>.</S.Text>
                     <S.Text>De <span>quarta á domingo</span> </S.Text>
-                    <S.Contact href={`tel:${71999099688}`}> 
+                    <S.Contact href={`tel:${71996944473}`}> 
                          <IconTell />
-                         <ButtonContact text='7199909688' />
+                         <ButtonContact text='996944473' />
                     </S.Contact>
                </S.ContainerInformation>        
           </S.Info>

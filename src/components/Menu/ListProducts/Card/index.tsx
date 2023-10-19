@@ -48,9 +48,13 @@ export function Card({Product, N}: any) {
                     </S.Infos>
                     <ButtonAdd onClick={handleClick} configCss={"configBttnCls"} status={cart}/>
                    {
-                    Product.type ?  (<S.Type $isCard={cart}>
-                    <S.Text  $isCard={cart}>Artesanal</S.Text>
-               </S.Type>) : null
+                    Product.type || Product.size
+                    ?    (
+                              <S.Type $isCard={cart}>
+                              <S.Text  $isCard={cart}>{ Product.size ? `${Product.size}` : 'Artesanal'}</S.Text>
+                              </S.Type>
+                         )
+                    : null
                    }
                </S.ContainerCard>
           </S.CardDefault>

@@ -138,8 +138,8 @@ const Cart = create(persist(
       let order = '';
       let itens = '';
 
-      order += '          Monster Gourmet Express     \n'
-      order += '        Rua XXXXXXXXXXXXXX  n:XX  \n'
+      order += '           Monster Gourmet Express     \n'
+      order += '        Rua Antônio Mota  n:365  \n'
       order += '----------------------------------------- \n'
       order += `Pedido realizado ${time.getDate()}/${time.getMonth()}/${time.getFullYear()} ás ${time.getHours()}:${time.getMinutes()} \n`
       order += '\n'
@@ -163,17 +163,17 @@ const Cart = create(persist(
       order += '          Pedido\n'
       order += '\n'
 
-      order += '| ITEM | DESC | QTDE | UN | VL. UNIT | VL. TOTAL |\n'
+      order += '| ITEM | DESC | QTDE | VL. UNIT | VL. TOTAL |\n'
       order += '\n'
 
       cart.forEach((item: any, index: number) => {
-        itens += `${index + 1} ${item.name} - ${item.qtdd}x - R$ ${item.price.toFixed(2).replace('.', ',')}|R$ ${item.value.toFixed(2).replace('.', ',')} \n`
+        itens += `${index + 1} ${item.name} - ${item.qtdd}x - R$ ${item.price.toFixed(2).replace('.', ',')} | R$ ${item.value.toFixed(2).replace('.', ',')} \n`
         itens += '\n'
       })
 
       const getValueSub = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
-      const getValueDelivery = get().valueDelivery
-      const getValueTotal = getValueSub + getValueDelivery
+      const getValueDelivery = Number(get().valueDelivery)
+      const getValueTotal = Number(getValueSub) + Number(getValueDelivery)
 
       order += itens
 
@@ -227,8 +227,8 @@ const Cart = create(persist(
       console.log(order)
       let encode = encodeURI(order);
 
-      let URL = `https://wa.me/${71999099688}?text=${encode}`;
-
+      let URL = `https://wa.me/${71996944473}?text=${encode}`;
+      
       const openExternalLink = (url: any) => {
         const link = document.createElement('a');
 

@@ -28,7 +28,6 @@ export const SelectInput = ({register, ...props}: InputProps) => {
     const completeAddress = {
       ...getterAddress,
       bairro : bar,
-
     }
     
     setterAddress(completeAddress)
@@ -37,6 +36,7 @@ export const SelectInput = ({register, ...props}: InputProps) => {
     <S.SelectStructure {...register} onChange={handleneighborhoodChange} >
       <optgroup label="Bairros disponivéis">
         <option value="">Escolha seu bairro</option>
+        <option value="Retirada-0">Retirada no local</option>
         <option value="Centro-5">Centro</option>
         <option value="Central-8">Central</option>
         <option value="Cruzeiro-5">Cruzeiro</option>

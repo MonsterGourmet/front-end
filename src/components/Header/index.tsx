@@ -16,7 +16,7 @@ export function Header() {
 
     const itensCart = getItensCart.length
 
-    const openingHour: number = 17; 
+    const openingHour: number = 9; 
     const closingHour: number = 23; 
 
     function isStoreOpen(): boolean {
