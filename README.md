@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Solução de Atendimento ao Cliente para Monster Gourmet Express
 
-First, run the development server:
+Este é um MVP (Produto Mínimo Viável) desenvolvido para oferecer uma solução de atendimento ao cliente para Monster Gourmet Express. O MVP contempla diversos recursos, incluindo perfil da loja, menu personalizado, pedidos realizados no site com entrega no WhatsApp Business, opções de entrega e retirada, controle de horário de funcionamento, entre outros.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- JIRA: Ferramenta de gerenciamento de projetos utilizada para acompanhar o desenvolvimento e o progresso do projeto.
+- TypeScript: Linguagem de programação baseada em JavaScript que adiciona tipagem estática opcional ao código.
+- Next.js: Estrutura de desenvolvimento web em React que permite a criação de aplicativos da web com renderização do lado do servidor e do lado do cliente.
+- Vercel: Plataforma de implantação e hospedagem que permite implantar sites de maneira simples e rápida.
+- GitFlow: Método de gerenciamento de branches e fluxo de trabalho para o controle de versão do Git.
+- GitHub: Plataforma de hospedagem de código-fonte e colaboração.
+- Figma: Software de design de interface do usuário baseado em navegador que permite a criação de protótipos, designs e gráficos de alta qualidade.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Instruções de Uso
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Pré-requisitos
+Certifique-se de ter o Node.js e o npm instalados em seu sistema.
 
-## Learn More
+### Instalação
+1. Clone o repositório utilizando o comando.
 
-To learn more about Next.js, take a look at the following resources:
+2. Navegue até o diretório do projeto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Instale as dependências do projeto com o seguinte comando:
+<code> yarn </code>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Execução
+Para executar o projeto localmente, utilize o seguinte comando:
+<code> yarn dev </code>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h2>Agradeço a Monster Gourmet por fornecer a oportunidade de desenvolver este MVP.</h2>
