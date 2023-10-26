@@ -83,12 +83,12 @@ function ContentModal({info}: any) {
 
           return (
                <>
-                    <S.Text as={'h1'} className={inter.className}><span>{type}</span></S.Text>
-                    <ul className="List">
-                         {
-                              currentList.map( product => <InfoCard key={product.name} Product={product}/>)
-                         }
-                    </ul>
+               <S.Text as={'h1'} className={inter.className}><span>{type}</span></S.Text>
+               <ul className="List">
+                    {
+                         currentList.map( product => <InfoCard key={product.name} Product={product}/>)
+                    }
+               </ul>
                </>
           )
      }

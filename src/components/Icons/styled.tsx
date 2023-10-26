@@ -12,7 +12,6 @@ const Figure = styled.figure<I.Il>`
      border-radius: 100%;
      border: 2.5px solid transparent;
     
-
      overflow: hidden;
 
      animation: ${(props) => props.status} 2s ease-in-out infinite;
@@ -109,13 +108,12 @@ const IconCart = styled.button<I.Button>`
 
      &:hover{
           background:  ${(props) => swapThemes(props.status).hover};
-
      }
 
      &:hover ${Ball}{
           border: var(--color-White) 1px solid;
-          background: var(--color-White);
 
+          background: var(--color-White);
           color: var(--color-Brand1);
      } 
 `
@@ -135,7 +133,6 @@ const IconTell = styled.div`
 
      position: absolute;
      left: -2px;
-
 
      :first-child{
           font-size: 28px;

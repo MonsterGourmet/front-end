@@ -48,7 +48,6 @@ const IconCart = styled.div`
   animation: shimmer 1s infinite;
 
   margin-top: 20px;
-
 `
 
 const CardWait = styled.div`

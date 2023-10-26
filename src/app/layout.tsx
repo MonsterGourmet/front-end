@@ -1,12 +1,7 @@
-import StyledConfig from '@/styles/_styled.config'
-import GlobalStyle from '@/styles/_globalStyled'
-
-import type { Metadata } from 'next'
-
-import { Inter } from 'next/font/google'
 import Head from './head'
 
-const inter = Inter({ subsets: ['latin'] })
+import StyledConfig from '@/styles/_styled.config'
+import GlobalStyle from '@/styles/_globalStyled'
 
 export default function RootLayout({
   children,
