@@ -6,6 +6,10 @@ import { Product } from "./Product/styled";
 const Categorie = styled.section`
      height: 380px;
      width: 100%;
+
+     /* @media screen and ( min-width: 700px ) {
+          margin: 0 100px;
+     } */
 `
 const Text = styled.p`
      span{
@@ -53,6 +57,9 @@ const ListProductsHorizontal = styled.ul`
           filter: blur(10px);
           transform: scale(0.9, 0.9);
      } */
+     @media screen and ( min-width: 700px ) {
+          justify-content: center;
+     }
 `
 
 
