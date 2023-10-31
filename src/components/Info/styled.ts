@@ -5,6 +5,10 @@ import { styled } from "styled-components"
 const Info = styled.section`
      min-height: 200px;
      width: 100%;
+
+     @media screen and ( min-width: 700px ) {
+          padding: 0 200px;
+     }
 ` 
 const Text = styled.p`
      span{
@@ -43,6 +47,7 @@ const ContainerInformation = styled.div`
      :where(h1){
           color: var(--color-Grey0); 
      }
+
 `
 export {
      Text, Info, Contact, ContainerInformation

@@ -2,8 +2,6 @@ import { create } from "zustand";
 
 import { persist } from 'zustand/middleware'
 
-
-// import { Product } from "@/providers/Types/interface";
 import { IMdl_StateAction, IMnu_StateAction } from "./types";
 import { IDefaultProduct } from "@/types";
 
@@ -101,8 +99,6 @@ const Cart = create(persist(
 
       const subTotal = get().cart.reduce((acc: any, num:any) => acc + num.value,0)
       const vleTotal = get().valueDelivery + get().valueSub 
-
-      console.log(vleTotal)
     
       set(() => ({ cart: updatedCart }))
       set(() => ({ valueSub: subTotal }))

@@ -14,5 +14,9 @@ const Header = styled.header`
   display: flex;
 
   transition: 200ms linear;
+
+  @media screen and ( min-width: 700px ) {
+    padding: 15px 200px 5px 200px;
+  }
 `
 export { Header }

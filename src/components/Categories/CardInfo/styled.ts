@@ -9,7 +9,7 @@ const Cardinfo = styled.li`
      padding: 10px;
 
      border-radius: 20px;
-     border: 1px solid rgba(247, 122, 32, 1); //TODOS: change var
+     border: 1px solid rgba(247, 122, 32, 1); 
 
      justify-content: center;
      flex-direction: row;
@@ -38,7 +38,7 @@ const BoxInfo = styled.div`
      width: 65%;
 
      border-radius: 10px;
-     border: 1px solid transparent; //TODOS: change var
+     border: 1px solid transparent; 
 
      padding-left: 5px;
 
@@ -52,31 +52,21 @@ const BoxInfo = styled.div`
           line-height: 30px;
      }
 
-     /* :where(hr){
-          height: 0.5px;
-
-          background-color: rgba(247, 122, 32, 1);
-          border: 0.5px solid transparent;
-     } */
-
 `
 const Text = styled.p`
-     /* font-size: 20px;
-     font-weight: 400;
-     line-height: 27px; */
 
-     /* color: var(--color-Brand1); */
-
-
+     .warning {
+          color: var(--color-Alert1);
+     }
 
      span{
           color: var(--color-Grey0);
 
-          /* font-size: 32px;
-          font-weight: 700;
-          line-height: 39px; */
-
           border-bottom: 0.5px solid rgba(247, 122, 32, 1);
+     };
+
+     span > .warning {
+          color: var(--color-Alert1);
      }
 `
 

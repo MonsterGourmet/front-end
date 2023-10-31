@@ -15,6 +15,10 @@ const Text = styled.p`
 
           font-weight: 700;
      }
+
+     @media screen and ( min-width: 700px ) {
+          padding: 0 200px;
+     }
 `
 const Cart = styled.section`
      height: 500px;
