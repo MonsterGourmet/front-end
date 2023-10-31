@@ -8,8 +8,9 @@ import { Inter } from "next/font/google"
 
 import { Product } from "./Product";
 
-import { loadDataOnCategory } from "../../../database/server";
 import { ICategories } from "@/types";
+
+import { loadDataOnCategory } from "../../../database/server";
 
 const inter = Inter({ subsets: ['latin'] })
 
