@@ -13,7 +13,7 @@ export function Menu() {
           <S.ContainerMenu className={inter.className}>
                <S.Text>Conheça nosso</S.Text>
                <S.Text as="h1"><span>Cardápio</span></S.Text>
-               <Options/>
+               <Options />
                <ListCard />
           </S.ContainerMenu>
      )

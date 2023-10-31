@@ -5,7 +5,6 @@ const Text = styled.p`
      color: var(--color-Brand1);
 
      font-family: 'Inter', sans-serif;
-     /* font-size: 240px; */
      font-weight: 400;
      line-height: 29px;
 
@@ -25,6 +24,10 @@ const Checkout = styled.section`
      align-items: center;
      display: flex;
      gap: 2.5px;
+
+     @media screen and ( min-width: 700px ) {
+          padding: 0 200px;
+     }
 `
 const SubTotal = styled.div`
      height: 50px;

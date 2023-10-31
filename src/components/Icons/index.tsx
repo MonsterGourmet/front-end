@@ -5,7 +5,6 @@ import * as S from "./styled"
 
 import * as I from "./types"
 
-
 import { BsCart, BsCartX, BsFillTelephoneOutboundFill } from "react-icons/bs";
 
 export function LogoImage({Profile, Status}: I.Logo): JSX.Element {

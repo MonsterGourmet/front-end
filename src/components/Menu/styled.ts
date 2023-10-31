@@ -11,6 +11,10 @@ const ContainerMenu = styled.main`
      flex-direction: column;
      align-items: center;
      display: flex;
+
+     @media screen and ( min-width: 700px ) {
+          padding: 0 200px;
+     }
 `
 
 const Text = styled.p`

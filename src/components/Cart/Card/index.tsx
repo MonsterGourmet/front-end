@@ -4,7 +4,6 @@ import * as S from './styled'
 import * as useStore from '@/hooks/useStore'
 
 import Image from 'next/image'
-import Photo from "../../../../public/Photo-Burguer.png"
 
 import { IProductCart } from '@/types'
 
