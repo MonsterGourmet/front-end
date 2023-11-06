@@ -8,7 +8,7 @@ import { IProductCategory } from "@/types";
 export function Product({ product, onClick }: IProductCategory) {
      return (
           <S.Product onClick={onClick}>
-               <S.Text as='h1'>{product.category}</S.Text>
+               {/* <S.Text as='h1'>{product.category}</S.Text> */}
                <S.Figure>
                     <Image src={product.imgURL} alt='Product' layout="fill" />
                </S.Figure>

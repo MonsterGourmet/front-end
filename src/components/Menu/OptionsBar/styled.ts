@@ -26,7 +26,7 @@ const NavBarHorizontal = styled.nav`
           align-items: center;
           display: flex;
           gap: 10px;
-          
+           
           overflow-y: hidden;
 
     }
@@ -54,7 +54,7 @@ const Option = styled.li`
      transition: 200ms linear;
 
      border-radius: 20px;
-     border: 1px solid #F77A20; //TODOS: Trocar para variable  
+     border: 1px solid #F77A20; 
 
      box-shadow: 0px 1px 1px 0px var(--color-DropShow);
 
@@ -76,7 +76,7 @@ const Option = styled.li`
 
           border-radius: 100%;
 
-          color: var(--color-Brand1);
+          color: transparent !important;
 
           animation:slide-in-blurred-right 250ms both;
 
@@ -89,6 +89,7 @@ const Option = styled.li`
           box-shadow: 0px 3px 3px 0px var(--color-DropShow);
 
           background-color: var(--color-Brand1);
+
           color: var(--color-White);
 
           .Option{

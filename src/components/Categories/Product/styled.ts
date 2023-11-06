@@ -17,7 +17,7 @@ const Product = styled.li`
      min-width: 172px;
      height: 280px;
 
-     padding: 12px 0 6px 12px;
+     /* padding: 12px 0 6px 12px; */
 
      position: relative;
 
@@ -26,9 +26,9 @@ const Product = styled.li`
      cursor: pointer;
 
      border-radius: 20px;
-     border: 2.5px solid #F0F0F0; //TODOS: Trocar por var
+     border: 2.5px solid #F0F0F0; 
 
-     background-color: var(--color-Brand1-75);
+     background-image: linear-gradient(to bottom, #000000, #9B3300);
 
      transition: 200ms linear;
      scroll-snap-align: center;
@@ -57,21 +57,13 @@ const Product = styled.li`
 
      @keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}     
 
-     /* h1{
-          font-weight: 700;
-          font-size: 25px;
-          line-height: 39px;
 
-          text-shadow: 2.5px 2.5px var(--color-Brand1-75);
-          
-          align-self: flex-start;
-
-          color: var(--color-White)
-     } */
 `
 const Figure = styled.figure`
      height: 200px;
      width: 200%;
+
+     height: 100%;
 
      margin: 0 auto;
 
