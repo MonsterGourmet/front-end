@@ -3,7 +3,7 @@
 export const loadDataOnCategory = [
      {
           category: 'Artesanais',
-          imgURL: "/Photo-Burguer.png",
+          imgURL: "/BurguerWallpaplper.svg",
           products: [
                {
                     id: 1,
@@ -163,7 +163,7 @@ export const loadDataOnCategory = [
      },
      {
           category: 'Hot Dog',
-          imgURL: "/Photo-HotDog.png",
+          imgURL: "/HotDogWalpalper.svg",
           products: [
                {
                     id: 9,
@@ -290,7 +290,7 @@ export const loadDataOnCategory = [
      },
      {
           category: 'Tradicionais',
-          imgURL: "/Photo-Burguer.png",
+          imgURL: "/BurguerWallpalper.svg",
           products: [
                {
                     id: 18,
@@ -426,7 +426,7 @@ export const loadDataOnCategory = [
      },
      {
           category: 'Batata Frita',
-          imgURL: "/Photo-Potatos.png",
+          imgURL: "/PotatoWallpalper.svg",
           products: [
                {
                     id: 34,
@@ -583,7 +583,7 @@ export const loadDataOnCategory = [
      },
      {
           category: 'Milk Shake',
-          imgURL: "/MilkShaOreo-removebg-preview.png",
+          imgURL: "/MilkShakeWallpaplper.svg",
           products: [
                {
                     id: 37,
