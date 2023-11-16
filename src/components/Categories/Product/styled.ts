@@ -17,8 +17,6 @@ const Product = styled.li`
      min-width: 172px;
      height: 280px;
 
-     /* padding: 12px 0 6px 12px; */
-
      position: relative;
 
      overflow: hidden;
