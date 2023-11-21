@@ -63,6 +63,7 @@ const Figure = styled.figure`
 
      height: 100%;
 
+     padding: 0 10px;
      margin: 0 auto;
 
      position: absolute;
@@ -70,6 +71,6 @@ const Figure = styled.figure`
     
      overflow: hidden;
 
-     img{ height: 100%; width: 100%; }
+     img{ height: 100%; width: 100%;  padding: 1px 68px;}
 `
 export { Product, Figure, Text }
