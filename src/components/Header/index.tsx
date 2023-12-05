@@ -16,7 +16,7 @@ export function Header() {
 
     const itensCart: number = getItensCart.length
 
-    const openingHour: number = 8; 
+    const openingHour: number = 17; 
     const closingHour: number = 23; 
 
     function isStoreOpen(): boolean {
@@ -24,14 +24,9 @@ export function Header() {
         return currentHour >= openingHour && currentHour < closingHour;
     }
 
-    // function isWorkingDay(): boolean {
-    //     const today: number = new Date().getDay(); 
-    //     return today > 2 && today < 7; 
-    // }
-
     function isWorkingDay(): boolean {
         const today: number = new Date().getDay(); 
-        return today > 0; 
+        return today > 2 && today < 7; 
     }
     
     function checkStoreStatus() {

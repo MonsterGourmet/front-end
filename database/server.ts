@@ -85,7 +85,7 @@ export const loadDataOnCategory = [
                     carnes: '1x Carne - Blend 130g',
                     salad: 'Alface, Tomate',
                     descripition: 'Cebola Caramelizada + Queijo Coalho',
-                    price: 19.00,
+                    price: 20.00,
                     type: 'Artesanal',
                     qtdd: 0,
                },
@@ -198,7 +198,7 @@ export const loadDataOnCategory = [
                     salad: 'Tomate, Milho, Ervilha',
                     descripition: 'Bacon + Puré + Batata Palha + Queijo Ralado',
                     molhos: 'Barbecue, Ketchup, Maionese',
-                    price: 10.00,
+                    price: 11.00,
                     qtdd: 0,
                },
                {
@@ -326,7 +326,7 @@ export const loadDataOnCategory = [
                     salad: 'Alface, Tomate, Milho, Ervilha.',
                     descripition: ' Frango, queijo. ',
                     molhos: 'Barbecue',
-                    price: 10.00,
+                    price: 11.00,
                     qtdd: 0,
                },
                {
@@ -577,7 +577,7 @@ export const loadDataOnCategory = [
                     imgURL: "/LitroCoca.jpg",
                     name: 'Litro Coca',
                     size: '1 Litro',
-                    price: 8.00
+                    price: 9.00
                },
           ]
      },
