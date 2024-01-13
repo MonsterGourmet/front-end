@@ -26,7 +26,8 @@ export function Header() {
 
     function isWorkingDay(): boolean {
         const today: number = new Date().getDay(); 
-        return today > 2 && today < 7; 
+        // return today > 3 && today < 7; 
+         return today > 3 || today == 0;
     }
     
     function checkStoreStatus() {
